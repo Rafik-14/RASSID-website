@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Light canvas (default surface) ───────────────────────────────── */
+  --color-paper: oklch(0.985 0.004 150);
+  --color-paper-2: oklch(0.965 0.006 150);
+  --color-paper-3: oklch(0.93 0.008 150);
+  --color-line: oklch(0.88 0.01 150);
+  --color-ink: oklch(0.20 0.012 160);
+  --color-ink-2: oklch(0.44 0.012 160);
+  --color-ink-3: oklch(0.52 0.012 160);
+
+  /* ── Dark anchors ─────────────────────────────────────────────────── */
+  --color-obsidian: oklch(0.16 0.004 160);
+  --color-obsidian-2: oklch(0.205 0.005 160);
+  --color-obsidian-3: oklch(0.255 0.006 160);
+  --color-mist: oklch(0.97 0.005 160);
+  --color-mist-2: oklch(0.78 0.008 160);
+  --color-mist-3: oklch(0.62 0.008 160);
+
+  /* ── Signal: lime (preserved equity) + meaning ────────────────────── */
+  --color-lime: oklch(0.86 0.23 132);       /* #7FE300 — fills, marks, on-dark emphasis */
+  --color-lime-deep: oklch(0.52 0.15 145);  /* legible green text/links on light */
+  --color-coral: oklch(0.55 0.20 25);       /* debt / owed / overdue accent — passes AA as text on light */
+
+  /* ── Radii ────────────────────────────────────────────────────────── */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-pill: 100px;
+
+  /* ── Type ─────────────────────────────────────────────────────────── */
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --font-arabic: "Cairo", system-ui, sans-serif;
+
+  /* ── Easing ───────────────────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ── Shadows ──────────────────────────────────────────────────────── */
+  --shadow-device: 0 2px 4px oklch(0 0 0 / 0.04), 0 24px 60px -12px oklch(0 0 0 / 0.22), 0 8px 24px -8px oklch(0 0 0 / 0.14);
+  --shadow-lift: 0 1px 2px oklch(0 0 0 / 0.04), 0 12px 32px -10px oklch(0 0 0 / 0.16);
+  --shadow-glow: 0 0 0 1px oklch(0.86 0.23 132 / 0.4), 0 14px 40px -10px oklch(0.86 0.23 132 / 0.35);
+}
+
+@variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+/* Arabic script swaps the entire type system to Cairo, display included. */
+[dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+[dir="rtl"] .font-display {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+}

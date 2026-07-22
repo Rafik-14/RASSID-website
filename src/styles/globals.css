@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1, "ss01" 1;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Tabular figures for ledger amounts / stats. */
+.tnum {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+::selection {
+  background: oklch(0.86 0.23 132 / 0.32);
+  color: var(--color-ink);
+}
+
+/* ── Semantic z-index scale ──────────────────────────────────────────── */
+:root {
+  --z-base: 0;
+  --z-raised: 10;
+  --z-nav: 40;
+  --z-overlay: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}
+
+/* ── Lime marker: a hand-drawn underline behind key words ────────────── */
+.mark {
+  position: relative;
+  white-space: nowrap;
+}
+.mark > span {
+  position: relative;
+  z-index: 1;
+}
+.mark::after {
+  content: "";
+  position: absolute;
+  left: -0.06em;
+  right: -0.06em;
+  bottom: 0.06em;
+  height: 0.34em;
+  background: var(--color-lime);
+  border-radius: 2px;
+  z-index: 0;
+  transform-origin: left center;
+  transform: scaleX(var(--mark, 1));
+}
+[dir="rtl"] .mark::after {
+  transform-origin: right center;
+}
+
+/* ── Section grain so flat light fields don't read sterile ───────────── */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* ── Keyframes ───────────────────────────────────────────────────────── */
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.86 0.23 132 / 0.45); }
+  50% { box-shadow: 0 0 0 10px oklch(0.86 0.23 132 / 0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes draw-mark {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.6s var(--ease-out-quint) infinite;
+}
+
+/* ── Always-on "translate me" attractor for the language toggle ───────── */
+@keyframes lang-glow {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.86 0.23 132 / 0); border-color: var(--color-line); }
+  50% { box-shadow: 0 0 0 4px oklch(0.86 0.23 132 / 0.14); border-color: oklch(0.86 0.23 132 / 0.55); }
+}
+@keyframes lang-flip {
+  0%, 62%, 100% { transform: rotate(0deg); }
+  72% { transform: rotate(-20deg); }
+  84% { transform: rotate(16deg); }
+}
+.lang-attract {
+  animation: lang-glow 3.4s var(--ease-out-quint) infinite;
+}
+.lang-attract :where(svg) {
+  animation: lang-flip 3.4s var(--ease-out-quint) infinite;
+  transform-origin: center;
+}
+.lang-attract:hover {
+  animation-play-state: paused;
+}
+
+/* ── Reduced motion: neutralize transforms / infinite loops ──────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .mark::after { transform: scaleX(1) !important; }
+  .marquee-track { animation: none !important; }
+}
