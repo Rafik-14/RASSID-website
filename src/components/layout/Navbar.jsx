@@ -4,7 +4,7 @@ import Button from '../ui/Button'
 import Logo from '../ui/Logo'
 import { useLang } from '../../contexts/LanguageContext'
 
-const navKeys = ['accueil', 'fonctionnalites', 'apropos', 'contact']
+const navKeys = ['accueil', 'fonctionnalites', 'plateforme', 'apropos', 'contact']
 
 export default function Navbar() {
   const { t, lang, toggleLang } = useLang()
