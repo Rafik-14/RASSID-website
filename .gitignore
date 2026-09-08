@@ -28,3 +28,7 @@ dist-ssr
 # Local tooling artifacts
 .impeccable/
 .claude/settings.local.json
+
+# Design assets & reference mockups
+add_assets/
+design-variants/

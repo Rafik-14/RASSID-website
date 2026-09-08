@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingCart, Banknote, RotateCcw, FileText, Check, ScanLine, Sparkles } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 import livraisonScreen from '../../assets/Livraison_operation_screen.webp';
 import paiementScreen from '../../assets/Paiment_operation_screen2.webp';
@@ -125,10 +124,7 @@ export default function MobileOperationsShowcase({ isRtl }) {
               return (
                 <button
                   key={op.id}
-                  onClick={() => {
-                    playTactile('click');
-                    setActiveTab(op.id);
-                  }}
+                  onClick={() => setActiveTab(op.id)}
                   className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 transition-all duration-200 active:scale-95 ${
                     isActive
                       ? 'bg-[#7FE300] text-black font-bold shadow-[0_0_20px_rgba(127,227,0,0.35)]'

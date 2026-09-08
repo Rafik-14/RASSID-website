@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import { Lock, ShieldAlert, ShieldCheck, RefreshCw, AlertTriangle, Key, FileCode } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 export default function SecuritySection() {
   const [isTampered, setIsTampered] = useState(false);
 
   const toggleTamper = () => {
-    if (!isTampered) {
-      playTactile('alert');
-      setIsTampered(true);
-    } else {
-      playTactile('success');
-      setIsTampered(false);
-    }
+    setIsTampered(!isTampered);
   };
 
   return (

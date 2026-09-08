@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 export default function FAQ({ isRtl }) {
   const [openIndex, setOpenIndex] = useState(0);
@@ -58,10 +57,7 @@ export default function FAQ({ isRtl }) {
                 className="rounded-2xl border border-white/10 bg-[#121418] p-5 transition-all hover:border-white/20"
               >
                 <button
-                  onClick={() => {
-                    playTactile('click');
-                    setOpenIndex(isOpen ? -1 : index);
-                  }}
+                  onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   className="flex w-full items-center justify-between text-left rtl:text-right text-sm sm:text-base font-bold text-white"
                 >
                   <span>{faq.q}</span>

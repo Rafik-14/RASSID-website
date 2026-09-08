@@ -12,7 +12,6 @@ import {
   TrendingUp,
   ArrowUpRight
 } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 export default function WebDashboardSection({ t }) {
   const [selectedWilaya, setSelectedWilaya] = useState('all');
@@ -148,16 +147,17 @@ export default function WebDashboardSection({ t }) {
             transition={{ delay: 0.3 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <button 
-              onClick={() => playTactile('click')}
+            <a 
+              href="https://app.rassid.dz"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-display text-sm font-bold text-black shadow-lg transition-all hover:bg-[#7FE300] hover:scale-105 active:scale-95"
             >
               <span>{t.dashboard_section_btn_console || "Ouvrir la Console"}</span>
               <ArrowUpRight className="size-4" />
-            </button>
+            </a>
             <a 
               href="#pricing"
-              onClick={() => playTactile('click')}
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-zinc-300 backdrop-blur-md transition-all hover:border-white/30 hover:bg-white/[0.08]"
             >
               <span>{t.dashboard_section_btn_demo || "Découvrir les fonctionnalités"}</span>

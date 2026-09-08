@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Check, Sparkles } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
-export default function Pricing({ t, onTrialClick }) {
+export default function Pricing({ t }) {
   const [billingCycle, setBillingCycle] = useState('quarterly');
 
   return (
@@ -24,10 +23,7 @@ export default function Pricing({ t, onTrialClick }) {
           {/* Billing Switcher */}
           <div className="mt-8 inline-flex items-center rounded-full border border-white/10 bg-[#14171C] p-1.5 text-xs font-semibold">
             <button
-              onClick={() => {
-                playTactile('click');
-                setBillingCycle('quarterly');
-              }}
+              onClick={() => setBillingCycle('quarterly')}
               className={`rounded-full px-4 py-2 transition-all ${
                 billingCycle === 'quarterly'
                   ? 'bg-white text-black font-bold shadow-md'
@@ -37,56 +33,51 @@ export default function Pricing({ t, onTrialClick }) {
               {t.pricing_toggle_quarterly}
             </button>
             <button
-              onClick={() => {
-                playTactile('click');
-                setBillingCycle('annual');
-              }}
+              onClick={() => setBillingCycle('annual')}
               className={`rounded-full px-4 py-2 transition-all flex items-center gap-1.5 ${
                 billingCycle === 'annual'
                   ? 'bg-[#7FE300] text-black font-bold shadow-md'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
+              <Sparkles className="size-3" />
               <span>{t.pricing_toggle_annual}</span>
             </button>
           </div>
         </div>
 
-        {/* Pricing Cards */}
+        {/* Pricing Cards Grid */}
         {billingCycle === 'quarterly' ? (
-          <div className="mt-14 grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             
             {/* 1 Mois */}
             <div className="rounded-3xl border border-white/10 bg-[#121418] p-7 flex flex-col justify-between transition-all hover:border-white/25">
               <div>
                 <span className="rounded-full bg-white/5 border border-white/10 px-3 py-1 text-xs font-bold text-zinc-300">
-                  1 Mois
+                  1 Mois (Mensuel)
                 </span>
                 <div className="mt-4">
                   <span className="font-display text-4xl font-extrabold text-white tnum">4 900 DA</span>
                   <span className="text-xs text-zinc-400"> / mois</span>
                 </div>
                 <p className="mt-3 text-xs text-zinc-400">
-                  Idéal pour tester sur une première tournée sans engagement de durée.
+                  Idéal pour tester RASSID sur une première tournée sans engagement long.
                 </p>
 
                 <ul className="mt-6 space-y-2.5 text-xs text-zinc-300">
-                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Application Mobile illimitée</li>
-                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Console Web de direction</li>
-                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Reçus thermiques Bluetooth</li>
-                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Support par téléphone & WhatsApp</li>
+                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> 1 fourgon + 1 accès Web</li>
+                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Mode 100% hors-ligne illimité</li>
+                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Impression reçus Bluetooth</li>
+                  <li className="flex items-center gap-2"><Check className="size-3.5 text-[#7FE300]" /> Support technique direct</li>
                 </ul>
               </div>
 
-              <button
-                onClick={() => {
-                  playTactile('success');
-                  onTrialClick();
-                }}
+              <a
+                href="#contact"
                 className="mt-8 block w-full rounded-full border border-white/20 bg-white/5 py-3 text-center font-display text-xs font-bold text-white transition-all hover:bg-white hover:text-black"
               >
                 Tester 7 Jours Gratuits
-              </button>
+              </a>
             </div>
 
             {/* 3 Mois (Featured) */}
@@ -114,15 +105,12 @@ export default function Pricing({ t, onTrialClick }) {
                 </ul>
               </div>
 
-              <button
-                onClick={() => {
-                  playTactile('success');
-                  onTrialClick();
-                }}
+              <a
+                href="#contact"
                 className="mt-8 block w-full rounded-full bg-[#7FE300] py-3 text-center font-display text-xs font-bold text-black transition-all hover:brightness-105 active:scale-95 shadow-md"
               >
                 Choisir la Formule 3 Mois
-              </button>
+              </a>
             </div>
 
             {/* 6 Mois */}
@@ -147,36 +135,30 @@ export default function Pricing({ t, onTrialClick }) {
                 </ul>
               </div>
 
-              <button
-                onClick={() => {
-                  playTactile('success');
-                  onTrialClick();
-                }}
+              <a
+                href="#contact"
                 className="mt-8 block w-full rounded-full border border-white/20 bg-white/5 py-3 text-center font-display text-xs font-bold text-white transition-all hover:bg-white hover:text-black"
               >
                 Choisir la Formule 6 Mois
-              </button>
+              </a>
             </div>
 
           </div>
         ) : (
-          /* Formule Annuelle Star Card */
-          <div className="mt-14 max-w-2xl mx-auto rounded-3xl border-2 border-[#7FE300] bg-[#12161E] p-8 sm:p-10 shadow-[0_0_50px_rgba(127,227,0,0.2)] relative">
-            <div className="absolute -top-3.5 start-8 rounded-full bg-[#7FE300] px-4 py-1 text-xs font-extrabold text-black uppercase tracking-wider flex items-center gap-1.5">
-              <Sparkles className="size-3.5" />
-              <span>★ Offre Intégrale · 2 Mois Offerts</span>
-            </div>
-
-            <div className="flex flex-wrap items-baseline justify-between gap-3 mt-2">
+          /* Annual View (VIP) */
+          <div className="mt-14 mx-auto max-w-3xl rounded-3xl border-2 border-[#7FE300] bg-gradient-to-b from-[#182014] to-[#0D1016] p-8 sm:p-12 shadow-[0_0_60px_rgba(127,227,0,0.25)] relative">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#7FE300]">Abonnement Entreprise Annuel</span>
+                <span className="rounded-full bg-[#7FE300] px-3 py-1 text-xs font-black text-black uppercase tracking-wider">
+                  Meilleure Offre Partenaire
+                </span>
                 <div className="mt-3">
-                  <span className="font-display text-5xl font-extrabold text-white tnum">39 900 DA</span>
-                  <span className="text-xs text-zinc-400"> / an</span>
+                  <span className="font-display text-5xl font-black text-white tnum">39 900 DA</span>
+                  <span className="text-sm text-zinc-400"> / an</span>
                   <span className="ms-3 text-sm text-zinc-500 line-through tnum">58 800 DA</span>
                 </div>
               </div>
-              <span className="rounded-full bg-[#7FE300]/20 border border-[#7FE300]/40 px-3.5 py-1 text-xs font-bold text-[#7FE300]">
+              <span className="rounded-2xl bg-[#7FE300]/10 border border-[#7FE300]/30 px-4 py-2 font-mono text-sm font-bold text-[#7FE300]">
                 Économisez 18 900 DA
               </span>
             </div>
@@ -194,15 +176,12 @@ export default function Pricing({ t, onTrialClick }) {
               <div className="flex items-center gap-2"><Check className="size-4 text-[#7FE300]" /> Ligne directe fondateur 24h/24</div>
             </div>
 
-            <button
-              onClick={() => {
-                playTactile('success');
-                onTrialClick();
-              }}
+            <a
+              href="#contact"
               className="mt-8 block w-full rounded-full bg-[#7FE300] py-4 text-center font-display text-sm font-bold text-black shadow-lg hover:brightness-105 active:scale-95 transition-all"
             >
               Sélectionner la Formule Annuelle
-            </button>
+            </a>
           </div>
         )}
 

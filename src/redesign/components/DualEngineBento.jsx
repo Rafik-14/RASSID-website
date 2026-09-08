@@ -10,7 +10,6 @@ import {
   Check, 
   RefreshCw
 } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 export default function DualEngineBento() {
   // Card 1: Anti-Credit Invariant Simulator State
@@ -24,13 +23,11 @@ export default function DualEngineBento() {
   const testPayment = (amount) => {
     setPaymentInput(amount);
     if (amount > debtAmount) {
-      playTactile('alert');
       setValidationResult({
         status: 'blocked',
         message: `OPÉRATION BLOQUÉE : L'encaissement (${amount.toLocaleString('fr-FR')} DA) excède la dette client (${debtAmount.toLocaleString('fr-FR')} DA). Un magasin ne peut jamais être créditeur d'un chauffeur.`
       });
     } else {
-      playTactile('click');
       const newB = debtAmount - amount;
       setValidationResult({
         status: 'valid',
@@ -44,7 +41,6 @@ export default function DualEngineBento() {
   const [isBursting, setIsBursting] = useState(false);
 
   const runOfflineBurst = () => {
-    playTactile('click');
     setIsBursting(true);
     let count = 0;
     const interval = setInterval(() => {
@@ -53,7 +49,6 @@ export default function DualEngineBento() {
       if (count >= 5) {
         clearInterval(interval);
         setIsBursting(false);
-        playTactile('success');
       }
     }, 120);
   };

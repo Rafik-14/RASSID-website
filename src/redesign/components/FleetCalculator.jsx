@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Calculator, TrendingUp, Clock, ShieldCheck, CheckCircle } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
 export default function FleetCalculator({ isRtl }) {
   const [vanCount, setVanCount] = useState(5);
@@ -23,7 +22,7 @@ export default function FleetCalculator({ isRtl }) {
       
       {/* Ambient background glow */}
       <div 
-        aria-hidden="true"
+        aria-hidden="true" 
         className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[750px] -translate-x-1/2 -translate-y-1/2 opacity-20 blur-[130px]"
         style={{ background: 'radial-gradient(circle, oklch(0.86 0.23 132), transparent 70%)' }}
       />
@@ -49,10 +48,7 @@ export default function FleetCalculator({ isRtl }) {
           {/* Period Toggle */}
           <div className="mt-6 inline-flex items-center rounded-full border border-white/15 bg-black/60 p-1">
             <button
-              onClick={() => {
-                playTactile('click');
-                setPeriod('month');
-              }}
+              onClick={() => setPeriod('month')}
               className={`rounded-full px-5 py-1.5 text-xs font-bold transition-all ${
                 period === 'month' ? 'bg-[#7FE300] text-black shadow-sm' : 'text-zinc-400 hover:text-white'
               }`}
@@ -60,10 +56,7 @@ export default function FleetCalculator({ isRtl }) {
               Calcul Mensuel
             </button>
             <button
-              onClick={() => {
-                playTactile('click');
-                setPeriod('year');
-              }}
+              onClick={() => setPeriod('year')}
               className={`rounded-full px-5 py-1.5 text-xs font-bold transition-all ${
                 period === 'year' ? 'bg-[#7FE300] text-black shadow-sm' : 'text-zinc-400 hover:text-white'
               }`}
@@ -93,10 +86,7 @@ export default function FleetCalculator({ isRtl }) {
                 min="1" 
                 max="25" 
                 value={vanCount} 
-                onChange={(e) => {
-                  playTactile('click');
-                  setVanCount(parseInt(e.target.value, 10));
-                }}
+                onChange={(e) => setVanCount(parseInt(e.target.value, 10))}
                 className="w-full h-3 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#7FE300]"
               />
             </div>

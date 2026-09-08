@@ -1,7 +1,6 @@
-﻿import { Layers, Volume2, VolumeX, Globe, ArrowRight } from 'lucide-react';
-import { playTactile } from '../utils/audio';
+import { Layers, Globe, ArrowRight } from 'lucide-react';
 
-export default function Navbar({ lang, setLang, isMuted, toggleMute, onTrialClick }) {
+export default function Navbar({ lang, setLang }) {
   const isRtl = lang === 'ar';
 
   return (
@@ -11,7 +10,6 @@ export default function Navbar({ lang, setLang, isMuted, toggleMute, onTrialClic
         {/* Brand Logo (Synex style: clean, confident, minimalist) */}
         <a 
           href="#hero" 
-          onClick={() => playTactile('click')}
           className="flex items-center gap-2 transition-transform hover:opacity-90"
         >
           <span className="grid size-7 place-items-center rounded-lg bg-black text-[#7FE300]">
@@ -26,52 +24,36 @@ export default function Navbar({ lang, setLang, isMuted, toggleMute, onTrialClic
         <nav className="hidden items-center gap-8 md:flex font-mono text-[11px] font-bold tracking-widest text-zinc-500 uppercase">
           <a 
             href="#console-centrale" 
-            onClick={() => playTactile('click')}
             className="transition-colors hover:text-black"
           >
             {isRtl ? 'لوحة التحكم' : 'GRAND LIVRE'}
           </a>
           <a 
             href="#pourquoi-rassid" 
-            onClick={() => playTactile('click')}
             className="transition-colors hover:text-black"
           >
             {isRtl ? 'لماذا رصيد' : 'POURQUOI RASSID'}
           </a>
           <a 
             href="#calculator" 
-            onClick={() => playTactile('click')}
             className="transition-colors hover:text-black"
           >
             {isRtl ? 'حاسبة الأرباح' : 'SIMULATEUR ROI'}
           </a>
           <a 
             href="#pricing" 
-            onClick={() => playTactile('click')}
             className="transition-colors hover:text-black"
           >
             {isRtl ? 'الأسعار' : 'TARIFS DZD'}
           </a>
         </nav>
 
-        {/* Right Actions: Lang + Audio + Synex Black Pill Button */}
+        {/* Right Actions: Lang + Synex Black Pill Button */}
         <div className="flex items-center gap-3">
           
-          {/* Audio Mute */}
-          <button 
-            onClick={toggleMute}
-            className="grid size-8 place-items-center rounded-full border border-zinc-200 text-zinc-500 transition-colors hover:text-black hover:border-zinc-400"
-            title={isMuted ? 'Activer le son' : 'Couper le son'}
-          >
-            {isMuted ? <VolumeX className="size-3.5 text-zinc-400" /> : <Volume2 className="size-3.5 text-black" />}
-          </button>
-
           {/* Language Switcher (Globe + Text) */}
           <button 
-            onClick={() => {
-              playTactile('click');
-              setLang(lang === 'fr' ? 'ar' : 'fr');
-            }}
+            onClick={() => setLang(lang === 'fr' ? 'ar' : 'fr')}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 hover:text-black transition-colors px-2 py-1"
           >
             <Globe className="size-3.5 text-zinc-500" />
@@ -79,18 +61,15 @@ export default function Navbar({ lang, setLang, isMuted, toggleMute, onTrialClic
           </button>
 
           {/* Synex-style Solid Black Pill Button */}
-          <button 
-            onClick={() => {
-              playTactile('success');
-              onTrialClick();
-            }}
+          <a 
+            href="#pricing"
             className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 font-display text-xs font-bold text-white shadow-sm transition-all hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98]"
           >
             <span className="grid size-4 place-items-center rounded-full bg-zinc-800 text-[#7FE300]">
               <ArrowRight className="size-2.5 rtl:rotate-180" />
             </span>
             <span>{isRtl ? 'تجربة مجانية' : 'Démarrer l\'essai'}</span>
-          </button>
+          </a>
 
         </div>
 

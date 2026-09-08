@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Layers, ArrowRight, Mail, Phone, MapPin, ShieldCheck, Terminal } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 import rocksFooter from '../assets/synex_rocks_footer.jpg';
 
 export default function Footer({ t }) {
@@ -53,7 +52,6 @@ export default function Footer({ t }) {
               <div className="pt-2">
                 <a 
                   href="mailto:contact@rassid.dz"
-                  onClick={() => playTactile('click')}
                   className="group inline-flex items-center gap-2 font-mono text-sm font-semibold text-white hover:text-[#7FE300] transition-colors"
                 >
                   <span>contact@rassid.dz</span>
@@ -77,7 +75,6 @@ export default function Footer({ t }) {
                   href="https://wa.me/213550000000"
                   target="_blank"
                   rel="noreferrer"
-                  onClick={() => playTactile('click')}
                   className="group inline-flex items-center gap-2 font-mono text-sm font-semibold text-white hover:text-[#7FE300] transition-colors"
                 >
                   <span>WhatsApp direct (+213)</span>

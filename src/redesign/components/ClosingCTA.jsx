@@ -1,7 +1,6 @@
 import { MessageCircle, Phone, Truck, Check } from 'lucide-react';
-import { playTactile } from '../utils/audio';
 
-export default function ClosingCTA({ t, onTrialClick }) {
+export default function ClosingCTA({ t }) {
   return (
     <section id="trial" className="relative py-24 lg:py-32 bg-[#08090C] dark-grain overflow-hidden">
       
@@ -41,10 +40,6 @@ export default function ClosingCTA({ t, onTrialClick }) {
               href="https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20lancer%20l'essai%20gratuit%207%20jours%20de%20RASSID%20pour%20ma%20distribution"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                playTactile('success');
-                onTrialClick();
-              }}
               className="inline-flex items-center gap-2.5 rounded-full bg-[#7FE300] px-9 py-4 font-display text-sm sm:text-base font-bold text-black shadow-[0_0_35px_rgba(127,227,0,0.4)] transition-all hover:scale-105 active:scale-95 hover:brightness-110"
             >
               <MessageCircle className="size-5" />
@@ -53,7 +48,6 @@ export default function ClosingCTA({ t, onTrialClick }) {
 
             <a
               href="tel:+213550000000"
-              onClick={() => playTactile('click')}
               className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all hover:border-white/40 hover:bg-white/10"
             >
               <Phone className="size-4 text-[#7FE300]" />
