@@ -1,202 +1,190 @@
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, Layers } from 'lucide-react';
 import mountainLandscape from '../assets/synex_mountain_landscape.jpg';
 
-export default function WhyRassidSection({ t }) {
-  const comparisonRows = [
+export default function WhyRassidSection({ t, isRtl }) {
+  const rows = [
     {
-      title: "Fonctionnement 100% Hors-ligne",
-      desc: "Base SQLite chiffrée sur le téléphone, zéro blocage en zone blanche.",
-      rassid: true,
-      others: "Non (Bloqué sans réseau)"
+      title: isRtl ? "تسجيل المبيعات والتسليم الميداني" : "Enregistrement des ventes & livraisons",
+      othersCheck: true
     },
     {
-      title: "Chaîne de Blocs SHA-256 scellée",
-      desc: "Chaque bon est mathématiquement lié au précédent. Aucune rature possible.",
-      rassid: true,
-      others: "Non (Ratures et pages arrachées)"
+      title: isRtl ? "عمل 100% بدون إنترنت وبدون أي توقف" : "Mode 100% hors-ligne autonome",
+      othersCheck: false
     },
     {
-      title: "Reçus & Bons Bluetooth Instantanés",
-      desc: "Ticket physique remis au commerçant avec solde restant certifié.",
-      rassid: true,
-      others: "Non (Bons manuels lents & illisibles)"
+      title: isRtl ? "سجل مالي مشفر وموثق رياضياً SHA-256" : "Grand livre scellé SHA-256 infalsifiable",
+      othersCheck: false
     },
     {
-      title: "Rapprochement et Clôture en 5 min",
-      desc: "Synchronisation automatique dès reconnexion. Fini les 2h de saisie le soir.",
-      rassid: true,
-      others: "Non (2h de pointage manuel chaque soir)"
+      title: isRtl ? "متابعة ديون وأرصدة المحلات" : "Fiches épiceries & suivi des dettes",
+      othersCheck: true
     },
     {
-      title: "Plafond de Dette & Blocage Crédit",
-      desc: "Impossible d'accorder un crédit imprévu sans validation du gérant.",
-      rassid: true,
-      others: "Non (Dépassements incontrôlés)"
+      title: isRtl ? "مطابقة الصندوق وإغلاق اليومية في 5 دقائق" : "Clôture de caisse & réconciliation en 5 min",
+      othersCheck: false
     }
   ];
 
   return (
-    <section id="pourquoi-rassid" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="pourquoi-rassid" className="relative overflow-hidden py-24 sm:py-32 bg-[#07080A]">
       
-      {/* Background Mountain Landscape (Synex Inspired) */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Mountain Landscape (Dark, Moody & Atmospheric) */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <img 
           src={mountainLandscape} 
-          alt="Mossy rolling hills and mist" 
-          className="w-full h-full object-cover object-center filter saturate-[0.9] brightness-[0.45]"
+          alt="Mossy rolling hills in darkness" 
+          className="w-full h-full object-cover object-center filter saturate-[1.05] brightness-[0.48] contrast-[1.12]"
         />
-        {/* Gradients to blend smoothly into surrounding sections */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#060709] via-black/40 to-[#08090B]" />
+        {/* Deep dark gradient overlay that preserves organic hill texture behind the matrix */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07080A] via-black/25 to-[#07080A]" />
+        
+        {/* Smooth bottom blend into next white section */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
         {/* ============================================================= */}
-        {/* SYNEX "WHY SYNEX" SECTION HEADER                              */}
+        {/* SYNEX SECTION HEADER                                          */}
         {/* ============================================================= */}
         <div className="mx-auto max-w-3xl text-center">
           
-          {/* Pill Badge */}
+          {/* Eyebrow Pill */}
           <motion.div 
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-mono tracking-widest text-zinc-200 backdrop-blur-md shadow-lg uppercase"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-mono tracking-widest text-white/90 backdrop-blur-md shadow-sm uppercase"
           >
-            <span className="size-1.5 rounded-full bg-[#7FE300] animate-pulse" />
             <span>{t.why_badge || "POURQUOI RASSID"}</span>
           </motion.div>
 
-          {/* Master Title */}
+          {/* Master Title (Compact 2 lines max) */}
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-display text-[clamp(2.2rem,4.8vw,4rem)] font-extrabold leading-[1.08] tracking-tight text-white"
+            className="font-display text-[clamp(2.1rem,4.2vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight text-white drop-shadow-sm max-w-3xl mx-auto"
           >
-            {t.why_title_1 || "Conçu pour la distribution moderne."}
-            <br />
-            <span className="text-zinc-300">
+            {t.why_title_1 || "Conçu pour le terrain."}
+            <br className="hidden sm:inline" />{" "}
+            <span className="text-white/85">
               {t.why_title_2 || "Pas pour les carnets d'hier."}
             </span>
           </motion.h2>
 
           {/* Subtitle */}
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-zinc-300"
+            className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-zinc-300 font-medium"
           >
             {t.why_sub || "Connectez vos livreurs, vos stocks mobiles et votre comptabilité — tous synchronisés dans un grand livre infalsifiable pour une visibilité totale."}
           </motion.p>
         </div>
 
         {/* ============================================================= */}
-        {/* FROSTED GLASS COMPARISON MATRIX (SYNEX STYLE)                 */}
+        {/* COMPARISON MATRIX (LARGER, ACCURATELY ALIGNED, SYNEX PALE PILL) */}
         {/* ============================================================= */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto mt-14 sm:mt-18 max-w-5xl overflow-hidden rounded-3xl border border-white/15 bg-black/50 p-6 sm:p-10 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.8)]"
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="relative mx-auto max-w-5xl mt-14 sm:mt-20"
         >
-          {/* 3-Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          {/* Column Headers directly above the table */}
+          <div className="grid grid-cols-[1fr_105px_105px] sm:grid-cols-[1fr_175px_175px] md:grid-cols-[1fr_210px_210px] items-center h-14 sm:h-[76px] mb-2 px-3 sm:px-8">
+            <div className="pe-2">
+              <span className="text-xs sm:text-sm font-medium tracking-wide text-white/70">
+                {t.why_col_capabilities || "Capacités fondamentales"}
+              </span>
+            </div>
             
-            {/* Column 1: Capabilities Description (5 cols) */}
-            <div className="md:col-span-6 space-y-7">
-              <p className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-400">
-                {t.why_col_capabilities || "Capacités Fondamentales"}
-              </p>
+            {/* Middle empty space: Elevated Rassid card header protrudes into here */}
+            <div />
 
-              <div className="space-y-6">
-                {comparisonRows.map((row, idx) => (
-                  <div key={idx} className="border-b border-white/10 pb-4">
-                    <h3 className="font-display text-base sm:text-lg font-bold text-white">
+            {/* Right Column Header: moved a little to the right */}
+            <div className="text-center flex items-center justify-center translate-x-3 sm:translate-x-6 rtl:-translate-x-3 rtl:sm:-translate-x-6">
+              <span className="text-xs sm:text-sm font-medium tracking-wide text-white/70 whitespace-nowrap">
+                {t.why_col_others || "Carnets & Excel"}
+              </span>
+            </div>
+          </div>
+
+          {/* Frosted Glass Comparison Matrix Container */}
+          <div className="relative">
+            
+            {/* Multi-layered Frosted Glass Backdrop Panel */}
+            <div className="absolute inset-0 rounded-[28px] sm:rounded-[34px] border border-white/[0.18] bg-gradient-to-b from-white/[0.14] via-white/[0.06] to-white/[0.02] backdrop-blur-2xl backdrop-saturate-[180%] shadow-[0_30px_90px_rgba(0,0,0,0.65),inset_0_1px_1px_rgba(255,255,255,0.40),inset_0_-1px_1px_rgba(0,0,0,0.30)] overflow-hidden pointer-events-none">
+              {/* Specular hairline on top border */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+              
+              {/* Radial ambient sheen from top */}
+              <div className="absolute -inset-x-20 top-0 h-40 bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" />
+            </div>
+
+            {/* Content Grid (Sits on top so floating card can protrude) */}
+            <div className="relative z-10 grid grid-cols-[1fr_105px_105px] sm:grid-cols-[1fr_175px_175px] md:grid-cols-[1fr_210px_210px]">
+              
+              {/* Column 1: Core capabilities list */}
+              <div className="flex flex-col divide-y divide-white/[0.08] ps-4 sm:ps-8 pe-3 sm:pe-6">
+                {rows.map((row, idx) => (
+                  <div key={idx} className="h-14 sm:h-[72px] flex items-center">
+                    <span className="text-xs sm:text-base font-medium text-white/95 leading-tight">
                       {row.title}
-                    </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                      {row.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Column 2: Center Elevated RASSID Card (Synex Pale Card) (3 cols) */}
-            <div className="md:col-span-3">
-              <div className="rounded-3xl bg-[#E8F5D8] p-6 text-black shadow-[0_15px_50px_rgba(0,0,0,0.6)] ring-2 ring-white/60">
-                {/* Synex-style Pill Header */}
-                <div className="flex items-center justify-center gap-2 pb-6 border-b border-black/10">
-                  <span className="grid size-6 place-items-center rounded-lg bg-black text-[#7FE300] font-black text-xs">
-                    R
-                  </span>
-                  <span className="font-display text-lg font-extrabold tracking-tight">
-                    {t.why_col_rassid || "RASSID"}
-                  </span>
-                </div>
-
-                {/* Checkmarks on every row */}
-                <div className="space-y-8 py-6 flex flex-col items-center justify-between">
-                  {comparisonRows.map((_, idx) => (
-                    <div key={idx} className="grid size-8 place-items-center rounded-full bg-black/10 text-black">
-                      <Check className="size-5 stroke-[2.5]" />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Bottom Cost / Value Metric */}
-                <div className="pt-4 border-t border-black/10 text-center">
-                  <p className="font-mono text-[10px] uppercase font-bold text-black/60">Garantie</p>
-                  <p className="font-display text-sm font-bold text-black mt-0.5">
-                    0 DZD perdu
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Column 3: Other Platforms / Paper (3 cols) */}
-            <div className="md:col-span-3 text-center space-y-7">
-              <p className="font-mono text-xs font-bold uppercase tracking-wider text-zinc-400">
-                {t.why_col_others || "Carnets papier & Excel"}
-              </p>
-
-              <div className="space-y-6">
-                {comparisonRows.map((row, idx) => (
-                  <div key={idx} className="border-b border-white/10 pb-4 h-[72px] flex items-center justify-center">
-                    <span className="rounded-full bg-white/5 border border-white/10 px-3 py-1 text-xs font-medium text-zinc-400">
-                      {row.others}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-2 text-center">
-                <p className="font-mono text-[10px] uppercase font-bold text-rose-400">Pertes</p>
-                <p className="font-display text-sm font-bold text-rose-300 mt-0.5">
-                  -15% à -25% marge
-                </p>
+              {/* Column 2: Elevated RASSID Card (Larger, Floating Pastel Pill) */}
+              <div className="relative">
+                <div className="absolute inset-x-1 sm:inset-x-2 -top-14 sm:-top-[76px] bottom-0 rounded-[22px] sm:rounded-[28px] bg-[#E9EAC8] text-black border border-black/[0.08] shadow-[0_24px_55px_rgba(0,0,0,0.48),0_4px_12px_rgba(0,0,0,0.20)] flex flex-col justify-between z-20 overflow-hidden">
+                  
+                  {/* Card Brand Header */}
+                  <div className="h-14 sm:h-[76px] flex items-center justify-center gap-1.5 sm:gap-2 border-b border-black/[0.08]">
+                    <span className="grid size-4 sm:size-5 place-items-center rounded-md bg-black text-[#E9EAC8]">
+                      <Layers className="size-2.5 sm:size-3" />
+                    </span>
+                    <span className="font-display text-xs sm:text-base font-black tracking-tight text-black">
+                      {t.why_col_rassid || "rassid"}
+                    </span>
+                  </div>
+
+                  {/* 5 Row Checkmarks */}
+                  <div className="flex-1 flex flex-col divide-y divide-black/[0.06]">
+                    {rows.map((_, idx) => (
+                      <div key={idx} className="h-14 sm:h-[72px] flex items-center justify-center">
+                        <Check className="size-4 sm:size-5.5 stroke-[2.5] text-black" />
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
               </div>
+
+              {/* Column 3: Other platform / Carnets */}
+              <div className="flex flex-col divide-y divide-white/[0.08] translate-x-3 sm:translate-x-6 rtl:-translate-x-3 rtl:sm:-translate-x-6">
+                {rows.map((row, idx) => (
+                  <div key={idx} className="h-14 sm:h-[72px] flex items-center justify-center text-center">
+                    {row.othersCheck ? (
+                      <Check className="size-4 sm:size-5.5 stroke-[2] text-white/90" />
+                    ) : (
+                      <span className="text-[11px] sm:text-sm font-normal text-white/45">
+                        {isRtl ? "غير متوفر" : "Absent"}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
             </div>
 
-          </div>
-
-          {/* Bottom Summary Bar */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-zinc-300">
-            <div>
-              <span className="text-zinc-400">{t.why_cost_label || "Bénéfice opérationnel constaté :"}</span>{' '}
-              <strong className="text-white">Basé sur 180+ tournées réelles en Algérie</strong>
-            </div>
-            <div className="flex items-center gap-4">
-              <span className="text-[#7FE300] font-bold">RASSID : Clôture en 5 min</span>
-              <span>vs</span>
-              <span className="text-zinc-400">Papier : 2h de litiges chaque soir</span>
-            </div>
           </div>
 
         </motion.div>

@@ -40,7 +40,7 @@ export default function RedesignPage() {
         <WebDashboardSection t={t} />
 
         {/* 3. Why RASSID: Synex Comparison Matrix over Landscape */}
-        <WhyRassidSection t={t} />
+        <WhyRassidSection t={t} isRtl={isRtl} />
 
         {/* 4. Distribution Reimagined: Synex Editorial Headline with Inline Pills */}
         <DistributionReimagined t={t} isRtl={isRtl} />
