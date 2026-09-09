@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { Check, Layers } from 'lucide-react';
+import { Check } from 'lucide-react';
 import mountainLandscape from '../assets/synex_mountain_landscape.jpg';
+import rassidIcon from '../assets/rassid-icon.svg';
 
 export default function WhyRassidSection({ t, isRtl }) {
   const rows = [
@@ -147,10 +148,12 @@ export default function WhyRassidSection({ t, isRtl }) {
                 <div className="absolute inset-x-1 sm:inset-x-2 -top-14 sm:-top-[76px] bottom-0 rounded-[22px] sm:rounded-[28px] bg-[#E9EAC8] text-black border border-black/[0.08] shadow-[0_24px_55px_rgba(0,0,0,0.48),0_4px_12px_rgba(0,0,0,0.20)] flex flex-col justify-between z-20 overflow-hidden">
                   
                   {/* Card Brand Header */}
-                  <div className="h-14 sm:h-[76px] flex items-center justify-center gap-1.5 sm:gap-2 border-b border-black/[0.08]">
-                    <span className="grid size-4 sm:size-5 place-items-center rounded-md bg-black text-[#E9EAC8]">
-                      <Layers className="size-2.5 sm:size-3" />
-                    </span>
+                  <div className="h-14 sm:h-[76px] flex items-center justify-center gap-2 border-b border-black/[0.08] px-2">
+                    <img 
+                      src={rassidIcon} 
+                      alt="RASSID" 
+                      className="h-4 sm:h-5 w-auto object-contain shrink-0" 
+                    />
                     <span className="font-display text-xs sm:text-base font-black tracking-tight text-black">
                       {t.why_col_rassid || "rassid"}
                     </span>

@@ -10,7 +10,7 @@ import paiementScreen from '../../assets/Paiment_operation_screen2.webp';
 
 export default function Hero({ t }) {
   return (
-    <section id="hero" className="relative w-full min-h-[945px] lg:min-h-[1010px] pt-12 sm:pt-16 lg:pt-20 overflow-hidden bg-paper flex flex-col justify-between">
+    <section id="hero" className="relative w-full min-h-[1000px] sm:min-h-[1060px] lg:min-h-[1100px] pt-16 sm:pt-20 lg:pt-24 overflow-hidden bg-paper flex flex-col justify-between">
       
       {/* Subtle clean ambient light glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.02)_0%,transparent_70%)] pointer-events-none" />
@@ -24,7 +24,7 @@ export default function Hero({ t }) {
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="pointer-events-none absolute left-0 bottom-0 z-10 w-[220px] sm:w-[320px] md:w-[390px] lg:w-[460px] xl:w-[500px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+        className="pointer-events-none absolute left-0 bottom-0 z-10 w-[230px] sm:w-[330px] md:w-[405px] lg:w-[475px] xl:w-[520px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
       >
         <img 
           src={cliffLeft} 
@@ -38,7 +38,7 @@ export default function Hero({ t }) {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="pointer-events-none absolute right-0 bottom-0 z-10 w-[220px] sm:w-[320px] md:w-[390px] lg:w-[460px] xl:w-[500px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+        className="pointer-events-none absolute right-0 bottom-0 z-10 w-[230px] sm:w-[330px] md:w-[405px] lg:w-[475px] xl:w-[520px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
       >
         <img 
           src={cliffRight} 
@@ -117,13 +117,14 @@ export default function Hero({ t }) {
       {/* ============================================================= */}
       {/* 3. AAVE 3-PHONE CASCADE (CUT OFF AT THE BOTTOM)               */}
       {/* ============================================================= */}
-      <div className="relative z-20 w-full mt-8 sm:mt-10 lg:mt-12 overflow-hidden flex justify-center h-[350px] sm:h-[420px] md:h-[480px] lg:h-[520px]">
+      <div className="relative z-20 w-full mt-8 sm:mt-10 lg:mt-12 overflow-hidden flex justify-center h-[370px] sm:h-[445px] md:h-[510px] lg:h-[560px]">
         
         {/* The 3 Overlapping Smartphones (Cut cleanly by the bottom edge) */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4 }}
+          dir="ltr"
           className="relative flex items-start justify-center px-4 max-w-5xl mx-auto"
         >
           
