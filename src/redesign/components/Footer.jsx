@@ -1,28 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Layers, ArrowRight, Mail, Phone, MapPin, ShieldCheck, Terminal } from 'lucide-react';
+import { Layers, ArrowRight, Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
 import rocksFooter from '../assets/synex_rocks_footer.jpg';
 
 export default function Footer({ t }) {
-  const [algiersTime, setAlgiersTime] = useState('');
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const timeStr = now.toLocaleTimeString('fr-FR', {
-        timeZone: 'Africa/Algiers',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      });
-      setAlgiersTime(timeStr);
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <footer className="relative overflow-hidden bg-[#060709] text-zinc-400 text-xs select-none dark-grain">
+    <footer className="relative overflow-hidden bg-[#060709] text-zinc-400 text-xs dark-grain">
       
       {/* ============================================================= */}
       {/* SYNEX 3-COLUMN CONTACT SECTION                                */}
@@ -112,26 +93,6 @@ export default function Footer({ t }) {
       <div className="relative z-20 border-t border-white/10 bg-[#060709] px-4 py-12">
         <div className="mx-auto max-w-7xl">
           
-          {/* Top Telemetry Strip */}
-          <div className="rounded-2xl border border-white/10 bg-black/60 p-4 sm:p-5 mb-10 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px]">
-            <div className="flex items-center gap-3">
-              <span className="grid size-7 place-items-center rounded-lg bg-[#7FE300]/15 text-[#7FE300] border border-[#7FE300]/30">
-                <Terminal className="size-3.5" />
-              </span>
-              <span className="text-white font-bold tracking-wide">RASSID CORE TELEMETRY</span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-zinc-400">
-              <span className="flex items-center gap-1.5">
-                <span className="size-1.5 rounded-full bg-[#7FE300] animate-pulse" />
-                <span>HEURE D'ALGER : <strong className="text-white">{algiersTime || '14:30:00'} (UTC+1)</strong></span>
-              </span>
-              <span>•</span>
-              <span>DEVISE : <strong className="text-white">DZD (ENTIER SANS CENTIME)</strong></span>
-              <span>•</span>
-              <span>SÉCURITÉ : <strong className="text-[#7FE300]">SHA-256 GENESIS</strong></span>
-            </div>
-          </div>
 
           {/* Nav & Platform Columns */}
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 pb-10 border-b border-white/5">
@@ -156,8 +117,6 @@ export default function Footer({ t }) {
                 <li><a href="#hero" className="hover:text-white transition-colors">Accueil & Vendeurs</a></li>
                 <li><a href="#console-centrale" className="hover:text-white transition-colors">Console Centrale Pro</a></li>
                 <li><a href="#pourquoi-rassid" className="hover:text-white transition-colors">Pourquoi RASSID (Matrice)</a></li>
-                <li><a href="#calculator" className="hover:text-white transition-colors">Simulateur ROI Flotte</a></li>
-                <li><a href="#security" className="hover:text-white transition-colors">Audit & SHA-256</a></li>
                 <li><a href="#pricing" className="hover:text-white transition-colors">Tarifs en Dinar Algérien</a></li>
               </ul>
             </div>

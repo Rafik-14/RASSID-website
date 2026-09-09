@@ -5,7 +5,7 @@ import dashboardConsole from '../assets/dashboard_console.webp';
 
 export default function WebDashboardSection({ t }) {
   return (
-    <section id="console-centrale" className="relative overflow-hidden bg-[#07080A] py-20 sm:py-28 lg:py-32 select-none border-t border-white/[0.06]">
+    <section id="console-centrale" className="relative overflow-hidden bg-[#07080A] py-20 sm:py-28 lg:py-32 border-t border-white/[0.06]">
       
       {/* ============================================================= */}
       {/* 1. AMBIENT BACKGROUND GRADIENTS (AAVE STYLE WITH RASSID GREEN) */}

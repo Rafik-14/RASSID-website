@@ -10,7 +10,7 @@ import paiementScreen from '../../assets/Paiment_operation_screen2.webp';
 
 export default function Hero({ t }) {
   return (
-    <section id="hero" className="relative w-full min-h-[945px] lg:min-h-[1010px] pt-12 sm:pt-16 lg:pt-20 select-none overflow-hidden bg-paper flex flex-col justify-between">
+    <section id="hero" className="relative w-full min-h-[945px] lg:min-h-[1010px] pt-12 sm:pt-16 lg:pt-20 overflow-hidden bg-paper flex flex-col justify-between">
       
       {/* Subtle clean ambient light glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.02)_0%,transparent_70%)] pointer-events-none" />
@@ -85,7 +85,7 @@ export default function Hero({ t }) {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-4 max-w-2xl text-[16px] sm:text-[18px] text-ink-2 font-medium leading-relaxed"
         >
-          {t?.hero_synex_sub_short || "The full power of Rassid, right in your pocket. Take full control of your fleet and collections offline."}
+          {t?.hero_synex_sub_short || t?.hero_synex_sub || "Toute la puissance de RASSID au creux de votre main. Prenez le contrôle total de vos tournées et encaissements, 100% hors-ligne sur le terrain."}
         </motion.p>
 
         {/* Action Button Pair */}

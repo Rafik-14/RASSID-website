@@ -4,7 +4,7 @@ export default function Navbar({ lang, setLang }) {
   const isRtl = lang === 'ar';
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-zinc-200/80 transition-all select-none">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-zinc-200/80 transition-all">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         
         {/* Brand Logo (Synex style: clean, confident, minimalist) */}
@@ -33,12 +33,6 @@ export default function Navbar({ lang, setLang }) {
             className="transition-colors hover:text-black"
           >
             {isRtl ? 'لماذا رصيد' : 'POURQUOI RASSID'}
-          </a>
-          <a 
-            href="#calculator" 
-            className="transition-colors hover:text-black"
-          >
-            {isRtl ? 'حاسبة الأرباح' : 'SIMULATEUR ROI'}
           </a>
           <a 
             href="#pricing" 

@@ -37,7 +37,7 @@ export default function WhyRassidSection({ t }) {
   ];
 
   return (
-    <section id="pourquoi-rassid" className="relative overflow-hidden py-24 sm:py-32 select-none">
+    <section id="pourquoi-rassid" className="relative overflow-hidden py-24 sm:py-32">
       
       {/* Background Mountain Landscape (Synex Inspired) */}
       <div className="absolute inset-0 z-0">

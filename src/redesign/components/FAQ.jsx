@@ -33,17 +33,17 @@ export default function FAQ({ isRtl }) {
   ];
 
   return (
-    <section id="faq" className="relative py-20 lg:py-28 bg-[#0B0D10] border-t border-white/10">
+    <section id="faq" className="relative py-20 lg:py-28 bg-[#F8F9FA] border-t border-zinc-200/80">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-semibold text-[#7FE300] mb-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3.5 py-1 text-xs font-semibold text-[#5EA800] shadow-sm mb-3">
             <HelpCircle className="size-3.5" />
-            <span>Questions & Réponses</span>
+            <span>{isRtl ? "الأسئلة الشائعة والأجوبة" : "Questions & Réponses"}</span>
           </div>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-extrabold text-white tracking-tight">
-            Tout ce qu'il faut savoir avant de démarrer.
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-extrabold text-zinc-950 tracking-tight">
+            {isRtl ? "كل ما تحتاج معرفته قبل الانطلاق." : "Tout ce qu'il faut savoir avant de démarrer."}
           </h2>
         </div>
 
@@ -54,14 +54,14 @@ export default function FAQ({ isRtl }) {
             return (
               <div 
                 key={index}
-                className="rounded-2xl border border-white/10 bg-[#121418] p-5 transition-all hover:border-white/20"
+                className="rounded-2xl border border-zinc-200/90 bg-white p-5 transition-all hover:border-zinc-300 shadow-sm"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  className="flex w-full items-center justify-between text-left rtl:text-right text-sm sm:text-base font-bold text-white"
+                  className="flex w-full items-center justify-between text-left rtl:text-right text-sm sm:text-base font-bold text-zinc-950"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`size-4 text-[#7FE300] shrink-0 transition-transform duration-300 ${
+                  <ChevronDown className={`size-4 text-[#5EA800] shrink-0 transition-transform duration-300 ${
                     isOpen ? 'rotate-180' : ''
                   }`} />
                 </button>
@@ -75,7 +75,7 @@ export default function FAQ({ isRtl }) {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-4 pt-4 border-t border-white/10 text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                      <p className="mt-4 pt-4 border-t border-zinc-100 text-xs sm:text-sm text-zinc-600 leading-relaxed">
                         {faq.a}
                       </p>
                     </motion.div>

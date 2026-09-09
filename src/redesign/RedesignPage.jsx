@@ -6,9 +6,6 @@ import Hero from './components/Hero';
 import WebDashboardSection from './components/WebDashboardSection';
 import WhyRassidSection from './components/WhyRassidSection';
 import DistributionReimagined from './components/DistributionReimagined';
-import FleetCalculator from './components/FleetCalculator';
-import MobileOperationsShowcase from './components/MobileOperationsShowcase';
-import SecuritySection from './components/SecuritySection';
 import FieldProof from './components/FieldProof';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -48,17 +45,8 @@ export default function RedesignPage() {
         {/* 4. Distribution Reimagined: Synex Editorial Headline with Inline Pills */}
         <DistributionReimagined t={t} isRtl={isRtl} />
 
-        {/* 5. Fleet ROI Calculator */}
-        <FleetCalculator t={t} isRtl={isRtl} />
-
-        {/* 6. Mobile Operations Detail Showcase */}
-        <MobileOperationsShowcase isRtl={isRtl} />
-
-        {/* 7. Cryptographic Security SHA-256 */}
-        <SecuritySection t={t} />
-
-        {/* 8. Field Proof Hardware & Logistics */}
-        <FieldProof />
+        {/* 5. Customer Field Testimonial */}
+        <FieldProof isRtl={isRtl} />
 
         {/* 9. Pricing in Algerian Dinar */}
         <Pricing t={t} />
