@@ -42,7 +42,7 @@ export default function FAQ({ isRtl }) {
             <HelpCircle className="size-3.5" />
             <span>{isRtl ? "الأسئلة الشائعة والأجوبة" : "Questions & Réponses"}</span>
           </div>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-extrabold text-zinc-950 tracking-tight">
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.2rem)] font-bold text-zinc-950 tracking-tight">
             {isRtl ? "كل ما تحتاج معرفته قبل الانطلاق." : "Tout ce qu'il faut savoir avant de démarrer."}
           </h2>
         </div>

@@ -1,58 +1,61 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import pillBranch from '../assets/synex_pill_branch.jpg';
 import pillFlowers from '../assets/synex_pill_flowers.jpg';
 
 export default function DistributionReimagined({ t, isRtl }) {
   return (
-    <section className="relative overflow-hidden bg-white py-24 sm:py-32 border-b border-zinc-100">
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative overflow-hidden bg-white py-20 sm:py-28 border-b border-zinc-100">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         
-        {/* Eyebrow Label (Synex Style) */}
-        <motion.div
+        {/* Eyebrow Label */}
+        <motion.p
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1 text-xs font-mono tracking-widest text-zinc-500 uppercase"
+          className="mb-5 text-xs sm:text-sm font-mono tracking-[0.2em] text-zinc-500 uppercase font-medium"
         >
-          <Sparkles className="size-3 text-[#7FE300]" />
-          <span>{t?.hero_synex_kicker || "DISTRIBUTION RÉINVENTÉE"}</span>
-        </motion.div>
+          {t?.hero_synex_kicker || "DISTRIBUTION RÉINVENTÉE"}
+        </motion.p>
 
-        {/* Master Editorial Typography with Inline Nature Imagery Pills */}
+        {/* Master Editorial Typography with Inline Nature Imagery Pills (2 Lines) */}
         <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display text-[clamp(2.2rem,5.5vw,4.8rem)] font-bold text-zinc-900 leading-[1.25] tracking-[-0.025em]"
+          className="font-display text-[clamp(2.15rem,4.5vw,3.95rem)] font-semibold text-zinc-900 leading-[1.2] tracking-[-0.03em] mx-auto max-w-7xl"
         >
-          <span className="text-zinc-400 font-normal">
-            {t?.hero_synex_line1_prefix || "Prenez le contrôle"}
-          </span>{' '}
-          <span className="inline-flex align-middle mx-1.5 sm:mx-2.5 h-10 w-24 sm:h-14 sm:w-36 overflow-hidden rounded-full border border-black/10 shadow-md ring-2 ring-white transition-transform duration-500 hover:scale-105">
-            <img 
-              src={pillBranch} 
-              alt="Mousse verte et nature" 
-              className="w-full h-full object-cover object-center"
-            />
-          </span>{' '}
-          <span>
-            {t?.hero_synex_line1_suffix || "de votre capital."}
+          <span className="block sm:whitespace-nowrap">
+            <span className="text-zinc-400 font-normal">
+              {t?.hero_synex_line1_prefix || "Prenez le contrôle"}
+            </span>{' '}
+            <span className="inline-flex align-middle mx-1 sm:mx-2 lg:mx-2.5 h-7 w-18 sm:h-9 sm:w-24 md:h-11 md:w-28 lg:h-12 lg:w-32 overflow-hidden rounded-full border border-black/10 shadow-sm ring-2 ring-white transition-transform duration-500 hover:scale-105">
+              <img 
+                src={pillBranch} 
+                alt="Mousse verte et nature" 
+                className="w-full h-full object-cover object-center"
+              />
+            </span>{' '}
+            <span>
+              {t?.hero_synex_line1_suffix || "de votre capital."}
+            </span>
           </span>
-          <br className="hidden sm:inline" />
-          <span>
-            {t?.hero_synex_line2_prefix || "Distribuez à un niveau"}
-          </span>{' '}
-          <span className="text-zinc-950 font-extrabold">
-            {t?.hero_synex_line2_suffix || "supérieur."}
-          </span>{' '}
-          <span className="inline-flex align-middle mx-1.5 sm:mx-2.5 h-10 w-24 sm:h-14 sm:w-36 overflow-hidden rounded-full border border-black/10 shadow-md ring-2 ring-white transition-transform duration-500 hover:scale-105">
-            <img 
-              src={pillFlowers} 
-              alt="Fleurs sauvages et roche" 
-              className="w-full h-full object-cover object-center"
-            />
+
+          <span className="block mt-1 sm:mt-2.5 sm:whitespace-nowrap">
+            <span>
+              {t?.hero_synex_line2_prefix || "Distribuez à un niveau"}
+            </span>{' '}
+            <span className="text-zinc-950 font-bold">
+              {t?.hero_synex_line2_suffix || "supérieur."}
+            </span>{' '}
+            <span className="inline-flex align-middle mx-1 sm:mx-2 lg:mx-2.5 h-7 w-18 sm:h-9 sm:w-24 md:h-11 md:w-28 lg:h-12 lg:w-32 overflow-hidden rounded-full border border-black/10 shadow-sm ring-2 ring-white transition-transform duration-500 hover:scale-105">
+              <img 
+                src={pillFlowers} 
+                alt="Fleurs sauvages et roche" 
+                className="w-full h-full object-cover object-center"
+              />
+            </span>
           </span>
         </motion.h2>
 

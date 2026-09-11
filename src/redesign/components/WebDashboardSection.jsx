@@ -60,7 +60,7 @@ export default function WebDashboardSection({ t }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-[clamp(2.2rem,5vw,4.2rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-white"
+            className="font-display text-[clamp(2.2rem,5vw,4.2rem)] font-bold leading-[1.08] tracking-[-0.03em] text-white"
           >
             <span>{t?.dashboard_section_title_prefix || "Toute la"}</span>{" "}
             <span className="bg-gradient-to-r from-[#D6FFA3] via-[#7FE300] to-[#38E09D] bg-clip-text text-transparent">

@@ -67,7 +67,7 @@ export default function WhyRassidSection({ t, isRtl }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-display text-[clamp(2.1rem,4.2vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight text-white drop-shadow-sm max-w-3xl mx-auto"
+            className="font-display text-[clamp(2.1rem,4.2vw,3.4rem)] font-bold leading-[1.12] tracking-tight text-white drop-shadow-sm max-w-3xl mx-auto"
           >
             {t.why_title_1 || "Conçu pour le terrain."}
             <br className="hidden sm:inline" />{" "}

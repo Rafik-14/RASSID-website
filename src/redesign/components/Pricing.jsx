@@ -13,7 +13,7 @@ export default function Pricing({ t }) {
           <p className="text-xs font-bold uppercase tracking-widest text-[#5EA800] mb-3">
             <span>Investissement Transparent</span>
           </p>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-extrabold text-zinc-950 tracking-tight">
+          <h2 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-bold text-zinc-950 tracking-tight">
             {t.pricing_title}
           </h2>
           <p className="mt-3 text-zinc-600 text-sm sm:text-base">
@@ -57,7 +57,7 @@ export default function Pricing({ t }) {
                   1 Mois (Mensuel)
                 </span>
                 <div className="mt-4">
-                  <span className="font-display text-4xl font-extrabold text-zinc-950 tnum">4 900 DA</span>
+                  <span className="font-display text-4xl font-bold text-zinc-950 tnum">4 900 DA</span>
                   <span className="text-xs text-zinc-500"> / mois</span>
                 </div>
                 <p className="mt-3 text-xs text-zinc-600 leading-relaxed">
@@ -82,7 +82,7 @@ export default function Pricing({ t }) {
 
             {/* 3 Mois (Featured) */}
             <div className="rounded-3xl border-2 border-zinc-950 bg-gradient-to-b from-zinc-50/80 to-white p-7 flex flex-col justify-between relative shadow-[0_12px_36px_rgba(0,0,0,0.06)]">
-              <div className="absolute -top-3 start-8 rounded-full bg-zinc-950 px-3 py-0.5 text-[10px] font-extrabold text-white uppercase tracking-wider">
+              <div className="absolute -top-3 start-8 rounded-full bg-zinc-950 px-3 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">
                 Le Plus Populaire · Économisez 800 DA
               </div>
               <div>
@@ -90,7 +90,7 @@ export default function Pricing({ t }) {
                   3 Mois (Trimestre)
                 </span>
                 <div className="mt-4">
-                  <span className="font-display text-4xl font-extrabold text-zinc-950 tnum">13 900 DA</span>
+                  <span className="font-display text-4xl font-bold text-zinc-950 tnum">13 900 DA</span>
                   <span className="text-xs text-zinc-500"> / 3 mois</span>
                 </div>
                 <p className="mt-3 text-xs text-zinc-600 leading-relaxed">
@@ -120,7 +120,7 @@ export default function Pricing({ t }) {
                   6 Mois (Semestre)
                 </span>
                 <div className="mt-4">
-                  <span className="font-display text-4xl font-extrabold text-zinc-950 tnum">26 900 DA</span>
+                  <span className="font-display text-4xl font-bold text-zinc-950 tnum">26 900 DA</span>
                   <span className="text-xs text-zinc-500"> / 6 mois</span>
                 </div>
                 <p className="mt-3 text-xs text-zinc-600 leading-relaxed">
@@ -153,7 +153,7 @@ export default function Pricing({ t }) {
                   Meilleure Offre Partenaire
                 </span>
                 <div className="mt-3">
-                  <span className="font-display text-5xl font-black text-zinc-950 tnum">39 900 DA</span>
+                  <span className="font-display text-5xl font-bold text-zinc-950 tnum">39 900 DA</span>
                   <span className="text-sm text-zinc-500"> / an</span>
                   <span className="ms-3 text-sm text-zinc-400 line-through tnum">58 800 DA</span>
                 </div>

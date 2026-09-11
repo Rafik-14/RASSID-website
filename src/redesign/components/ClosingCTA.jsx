@@ -25,7 +25,7 @@ export default function ClosingCTA({ t }) {
           </div>
 
           {/* Big Headline */}
-          <h2 className="font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-extrabold text-zinc-950 tracking-[-0.035em] leading-[1.05] text-balance max-w-3xl mx-auto">
+          <h2 className="font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold text-zinc-950 tracking-[-0.035em] leading-[1.05] text-balance max-w-3xl mx-auto">
             Sécurisez votre trésorerie<br />
             <span className="text-zinc-500 font-normal italic">dès la prochaine tournée.</span>
           </h2>

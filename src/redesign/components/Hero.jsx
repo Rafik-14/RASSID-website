@@ -4,9 +4,9 @@ import appIcon from '../assets/rassid_app_icon.webp';
 import cliffLeft from '../assets/cliff_left.webp';
 import cliffRight from '../assets/cliff_right.webp';
 
-import homeScreen from '../../assets/Home_screen.webp';
-import livraisonScreen from '../../assets/Livraison_operation_screen.webp';
-import paiementScreen from '../../assets/Paiment_operation_screen2.webp';
+import homeScreen from '../../assets/Mobile_home_mockup.webp';
+import livraisonScreen from '../../assets/Mobile_livraison_mockup.webp';
+import depensesScreen from '../../assets/Mobile_depenses_mockup.webp';
 
 export default function Hero({ t }) {
   return (
@@ -73,7 +73,7 @@ export default function Hero({ t }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-display text-[clamp(2.4rem,5.2vw,4.4rem)] font-extrabold text-obsidian leading-[1.08] tracking-[-0.03em] max-w-4xl mx-auto"
+          className="font-display text-[clamp(2.4rem,5.2vw,4.4rem)] font-bold text-obsidian leading-[1.08] tracking-[-0.03em] max-w-4xl mx-auto"
         >
           {t?.hero_synex_h1_light || "Finance Reimagined."}
         </motion.h1>
@@ -132,29 +132,29 @@ export default function Hero({ t }) {
           <div className="relative w-[210px] sm:w-[270px] md:w-[310px] lg:w-[350px] -mr-16 sm:-mr-24 lg:-mr-32 z-10 select-none translate-y-6 sm:translate-y-8 lg:translate-y-10">
             <img 
               src={livraisonScreen} 
-              alt="Livraison operation screen" 
+              alt="RASSID mobile livraison screen" 
               draggable={false}
-              className="w-full h-auto block select-none rounded-t-[32px] sm:rounded-t-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.25)] ring-1 ring-black/10"
+              className="w-full h-auto block select-none"
             />
           </div>
 
-          {/* CENTER PHONE: Home Dashboard Screen (Up a little) */}
+          {/* CENTER PHONE: Main Home Dashboard Screen (Up a little) */}
           <div className="relative w-[210px] sm:w-[270px] md:w-[310px] lg:w-[350px] z-20 select-none">
             <img 
               src={homeScreen} 
-              alt="RASSID driver home dashboard" 
+              alt="RASSID mobile home dashboard screen" 
               draggable={false}
-              className="w-full h-auto block select-none rounded-t-[32px] sm:rounded-t-[40px] shadow-[0_35px_80px_rgba(0,0,0,0.40)] ring-1 ring-black/10"
+              className="w-full h-auto block select-none drop-shadow-[0_8px_20px_rgba(0,0,0,0.14)]"
             />
           </div>
 
-          {/* RIGHT PHONE: Paiement Screen */}
+          {/* RIGHT PHONE: Dépenses Screen */}
           <div className="relative w-[210px] sm:w-[270px] md:w-[310px] lg:w-[350px] -ml-16 sm:-ml-24 lg:-ml-32 z-10 select-none translate-y-6 sm:translate-y-8 lg:translate-y-10">
             <img 
-              src={paiementScreen} 
-              alt="Paiement operation screen" 
+              src={depensesScreen} 
+              alt="RASSID mobile depenses screen" 
               draggable={false}
-              className="w-full h-auto block select-none rounded-t-[32px] sm:rounded-t-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.25)] ring-1 ring-black/10"
+              className="w-full h-auto block select-none"
             />
           </div>
 

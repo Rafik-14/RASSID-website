@@ -14,7 +14,7 @@ export default function Footer({ t }) {
             
             {/* Column 1: "We'd love to hear from you" (5 cols) */}
             <div className="md:col-span-5 space-y-4">
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
                 {t?.footer_contact_title || "Échangeons sur votre distribution"}
               </h2>
               <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-md">
@@ -97,7 +97,7 @@ export default function Footer({ t }) {
           {/* Nav & Platform Columns */}
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 pb-10 border-b border-white/5">
             <div>
-              <div className="flex items-center gap-2 font-display text-lg font-extrabold text-white">
+              <div className="flex items-center gap-2 font-display text-lg font-bold text-white">
                 <span className="grid size-7 place-items-center rounded-lg bg-[#7FE300] text-black">
                   <Layers className="size-4" />
                 </span>

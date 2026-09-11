@@ -72,7 +72,7 @@ export default function DualEngineBento() {
             <span>Architecture Métier · Spécifique à la Distribution Algérienne</span>
           </div>
 
-          <h2 className="font-display text-[clamp(2.2rem,4.5vw,3.8rem)] font-extrabold text-white tracking-[-0.03em] leading-[1.05]">
+          <h2 className="font-display text-[clamp(2.2rem,4.5vw,3.8rem)] font-bold text-white tracking-[-0.03em] leading-[1.05]">
             Construit pour la réalité brute du comptoir.<br />
             <span className="text-zinc-400 font-normal italic">Pas pour un bureau aseptisé.</span>
           </h2>
