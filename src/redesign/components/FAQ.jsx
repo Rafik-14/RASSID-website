@@ -147,7 +147,7 @@ export default function FAQ({ t, isRtl }) {
     <section 
       id="faq" 
       ref={sectionRef} 
-      className="relative py-20 lg:py-28 bg-[#FAF9F5] border-t border-zinc-200/70 overflow-hidden select-text"
+      className="relative py-20 lg:py-28 bg-white border-t border-zinc-100 overflow-hidden select-text"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         

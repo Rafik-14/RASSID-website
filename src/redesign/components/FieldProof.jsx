@@ -2,11 +2,11 @@ import { Quote, MapPin, CheckCircle2 } from 'lucide-react';
 
 export default function FieldProof({ isRtl }) {
   return (
-    <section className="relative py-20 lg:py-28 bg-[#F8F9FA] border-t border-zinc-200/80">
+    <section className="relative py-20 lg:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Customer Testimonial Card */}
-        <div className="max-w-3xl mx-auto rounded-3xl border border-zinc-200/90 bg-white p-8 sm:p-12 text-center shadow-[0_12px_40px_rgba(0,0,0,0.04)] relative overflow-hidden">
+        <div className="max-w-3xl mx-auto rounded-3xl border border-zinc-200/80 bg-zinc-50/70 p-8 sm:p-12 text-center shadow-[0_12px_40px_rgba(0,0,0,0.04)] relative overflow-hidden">
           <Quote className="size-10 mx-auto text-[#7FE300] mb-4" />
           <p className="font-display text-lg sm:text-xl font-medium text-zinc-900 italic leading-relaxed">
             {isRtl

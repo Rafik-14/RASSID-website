@@ -6,10 +6,12 @@ export default function PrimaryButton({
   className = '',
   size = 'md',
   dark = false,
+  variant = 'primary', // 'primary' | 'outline'
   ...props
 }) {
   const sizeClass = size === 'sm' ? 'btn-sm' : '';
-  const classes = `btn-rassid-lime ${sizeClass} ${dark ? 'dark-canvas' : ''} ${className}`.trim();
+  const variantClass = variant === 'outline' ? 'btn-rassid-outline' : 'btn-rassid-lime';
+  const classes = `${variantClass} ${sizeClass} ${dark ? 'dark-canvas' : ''} ${className}`.trim();
 
   const content = (
     <>

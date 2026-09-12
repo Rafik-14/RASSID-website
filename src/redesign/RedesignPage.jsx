@@ -49,7 +49,7 @@ export default function RedesignPage() {
         <FieldProof isRtl={isRtl} />
 
         {/* 9. Pricing in Algerian Dinar */}
-        <Pricing t={t} />
+        <Pricing t={t} isRtl={isRtl} />
 
         {/* 10. Wholesale FAQ */}
         <FAQ t={t} isRtl={isRtl} />
