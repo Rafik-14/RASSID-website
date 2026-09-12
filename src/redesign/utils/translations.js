@@ -97,12 +97,14 @@ export const translations = {
     why_cost_rassid: "0 DZD de perte",
     why_cost_others: "-15% à -25% de marge",
     
-    footer_contact_title: "Échangeons sur votre distribution",
-    footer_contact_sub: "Nous sommes toujours à l'écoute des distributeurs, grossistes et entreprises de distribution en Algérie.",
-    footer_mail_title: "Écrivez-nous",
-    footer_mail_sub: "Pas fan des formulaires ? Écrivez-nous directement par e-mail :",
-    footer_call_title: "Prendre rendez-vous",
-    footer_call_sub: "Discutons de vos besoins et de vos tournées en détail :"
+    footer_nav_system: "Système",
+    footer_nav_dual: "Double Flux",
+    footer_nav_why: "Pourquoi RASSID",
+    footer_nav_pricing: "Tarifs",
+    footer_nav_faq: "FAQ",
+    footer_terms: "Conditions d'utilisation",
+    footer_privacy: "Politique de confidentialité",
+    footer_rights: "Tous droits réservés."
   },
   ar: {
     telemetry_status: "نظام رصيد 3.0 · محرك SQLite محلي ومزامنة سحابية لحظية",
@@ -202,11 +204,13 @@ export const translations = {
     why_cost_rassid: "0 دج ديون ضائعة",
     why_cost_others: "-15% إلى -25% خسارة أرباح",
     
-    footer_contact_title: "تحدث معنا حول شبكة توزيعك",
-    footer_contact_sub: "نحن دائماً في الاستماع لشركات التوزيع وتجار الجملة في كافة الولايات الجزائرية.",
-    footer_mail_title: "راسلنا بالبريد الإلكتروني",
-    footer_mail_sub: "لا تحب ملء الاستمارات؟ راسلنا مباشرة عبر البريد الإلكتروني :",
-    footer_call_title: "تحدث معنا عبر واتساب",
-    footer_call_sub: "لنتناقش حول جولات التوزيع واحتياجات شركتك بالتفصيل مع الفريق المؤسس :"
+    footer_nav_system: "النظام",
+    footer_nav_dual: "التدفق المزدوج",
+    footer_nav_why: "لماذا رصيد",
+    footer_nav_pricing: "الأسعار",
+    footer_nav_faq: "الأسئلة الشائعة",
+    footer_terms: "شروط الاستخدام",
+    footer_privacy: "سياسة الخصوصية",
+    footer_rights: "جميع الحقوق محفوظة."
   }
 };

@@ -58,8 +58,8 @@ export default function RedesignPage() {
         <ClosingCTA t={t} isRtl={isRtl} />
       </main>
 
-      {/* 12. Synex Contact Cards + Basalt Water Panorama + Financial Ledger Footer */}
-      <Footer t={t} />
+      {/* 12. Minimalist Footer with Gradient Continuation and Faded Wordmark */}
+      <Footer t={t} isRtl={isRtl} />
 
     </div>
   );
