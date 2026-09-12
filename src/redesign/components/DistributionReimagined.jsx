@@ -6,7 +6,8 @@ import pillFlowers from '../assets/synex_pill_flowers.jpg';
 
 export default function DistributionReimagined({ t, isRtl }) {
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-28 border-b border-zinc-100">
+    <section id="distribution-reimaginee" className="relative overflow-hidden bg-white py-20 sm:py-28 border-b border-zinc-100">
+      <span id="double-flux" className="absolute -top-20 pointer-events-none" aria-hidden="true" />
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Eyebrow Label */}

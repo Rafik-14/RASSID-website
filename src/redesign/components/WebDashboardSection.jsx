@@ -7,7 +7,9 @@ import dashboardConsole from '../assets/dashboard_console.webp';
 
 export default function WebDashboardSection({ t }) {
   return (
-    <section id="console-centrale" className="relative overflow-hidden bg-[#07080A] py-20 sm:py-28 lg:py-32 border-t border-white/[0.06]">
+    <section id="dashboard" className="relative overflow-hidden bg-[#07080A] py-20 sm:py-28 lg:py-32 border-t border-white/[0.06]">
+      <span id="console-centrale" className="absolute -top-20 pointer-events-none" aria-hidden="true" />
+      <span id="systeme" className="absolute -top-20 pointer-events-none" aria-hidden="true" />
       
       {/* ============================================================= */}
       {/* 1. AMBIENT BACKGROUND GRADIENTS (AAVE STYLE WITH RASSID GREEN) */}

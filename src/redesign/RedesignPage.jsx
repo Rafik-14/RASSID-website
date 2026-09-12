@@ -52,7 +52,7 @@ export default function RedesignPage() {
         <Pricing t={t} />
 
         {/* 10. Wholesale FAQ */}
-        <FAQ isRtl={isRtl} />
+        <FAQ t={t} isRtl={isRtl} />
 
         {/* 11. Direct Trial CTA */}
         <ClosingCTA t={t} isRtl={isRtl} />

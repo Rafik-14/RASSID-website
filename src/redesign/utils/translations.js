@@ -97,6 +97,14 @@ export const translations = {
     why_cost_rassid: "0 DZD de perte",
     why_cost_others: "-15% à -25% de marge",
     
+    faq_badge: "QUESTIONS FRÉQUENTES",
+    faq_title_line1: "Questions",
+    faq_title_line2_prefix: "Fréquemment ",
+    faq_title_line2_highlight: "Posées",
+    faq_desc: "Trouvez les réponses directes sur le fonctionnement de RASSID, le mode hors-ligne absolu et la gestion de vos tournées réelles.",
+    faq_prev: "Précédent",
+    faq_next: "Suivant",
+    
     footer_nav_system: "Système",
     footer_nav_dual: "Double Flux",
     footer_nav_why: "Pourquoi RASSID",
@@ -203,6 +211,14 @@ export const translations = {
     why_cost_sub: "بناءً على أكثر من 180 جولة توزيع حقيقية في الجزائر.",
     why_cost_rassid: "0 دج ديون ضائعة",
     why_cost_others: "-15% إلى -25% خسارة أرباح",
+    
+    faq_badge: "الأسئلة الشائعة",
+    faq_title_line1: "الأسئلة",
+    faq_title_line2_prefix: "",
+    faq_title_line2_highlight: "الأكثر شيوعاً",
+    faq_desc: "إجابات واضحة ومباشرة حول تشغيل رصيد، نظام العمل بدون إنترنت، وإدارة جولات التوزيع في الميدان.",
+    faq_prev: "السابق",
+    faq_next: "التالي",
     
     footer_nav_system: "النظام",
     footer_nav_dual: "التدفق المزدوج",

@@ -91,7 +91,7 @@ export default function Footer({ t }) {
       {/* Seamless gradient extension from CTA section */}
       <div 
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-44 sm:h-64 bg-gradient-to-b from-[#E0FC8E]/90 via-[#EEFCC0]/40 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-36 sm:h-48 bg-gradient-to-b from-[#7FE300]/22 via-[#7FE300]/06 to-transparent"
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-4">

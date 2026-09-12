@@ -44,13 +44,13 @@ function PillPatternBackground() {
         <defs>
           <linearGradient id="pillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="#FAF9F5" stopOpacity="0" />
-            <stop offset="50%" stopColor="#EEFCC0" stopOpacity="0.45" />
-            <stop offset="100%" stopColor="#E2FCA0" stopOpacity="0.96" />
+            <stop offset="50%" stopColor="#7FE300" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#7FE300" stopOpacity="0.65" />
           </linearGradient>
         </defs>
 
         {/* Row 1 (y: -40, height: 140, r: 70) */}
-        <g fill="rgba(235, 254, 182, 0.72)">
+        <g fill="rgba(127, 227, 0, 0.06)">
           <rect x="-100" y="-40" width="420" height="140" rx="70" />
           <circle cx="422" cy="30" r="70" />
           <rect x="524" y="-40" width="420" height="140" rx="70" />
@@ -60,7 +60,7 @@ function PillPatternBackground() {
         </g>
 
         {/* Row 2 (y: 160, height: 140, r: 70) */}
-        <g fill="rgba(228, 250, 160, 0.65)">
+        <g fill="rgba(127, 227, 0, 0.09)">
           <circle cx="110" cy="230" r="70" />
           <rect x="212" y="160" width="420" height="140" rx="70" />
           <circle cx="734" cy="230" r="70" />
@@ -70,7 +70,7 @@ function PillPatternBackground() {
         </g>
 
         {/* Row 3 (y: 360, height: 140, r: 70) */}
-        <g fill="rgba(235, 254, 182, 0.72)">
+        <g fill="rgba(127, 227, 0, 0.13)">
           <rect x="-140" y="360" width="420" height="140" rx="70" />
           <circle cx="382" cy="430" r="70" />
           <rect x="484" y="360" width="420" height="140" rx="70" />
@@ -80,7 +80,7 @@ function PillPatternBackground() {
         </g>
 
         {/* Row 4 (y: 560, height: 140, r: 70) */}
-        <g fill="rgba(228, 250, 160, 0.65)">
+        <g fill="rgba(127, 227, 0, 0.18)">
           <circle cx="90" cy="630" r="70" />
           <rect x="192" y="560" width="420" height="140" rx="70" />
           <circle cx="714" cy="630" r="70" />
@@ -90,7 +90,7 @@ function PillPatternBackground() {
         </g>
 
         {/* Row 5 (y: 760, height: 140, r: 70) */}
-        <g fill="rgba(235, 254, 182, 0.72)">
+        <g fill="rgba(127, 227, 0, 0.24)">
           <rect x="-80" y="760" width="420" height="140" rx="70" />
           <circle cx="442" cy="830" r="70" />
           <rect x="544" y="760" width="420" height="140" rx="70" />
@@ -99,9 +99,9 @@ function PillPatternBackground() {
         </g>
       </svg>
 
-      {/* Atmospheric bottom fade into vibrant Rassid lime */}
+      {/* Atmospheric bottom fade into gentle Rassid lime */}
       <div 
-        className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#E0FC8E]/92 via-[#EEFCC0]/45 to-transparent pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#7FE300]/22 via-[#7FE300]/06 to-transparent pointer-events-none"
       />
     </div>
   );
