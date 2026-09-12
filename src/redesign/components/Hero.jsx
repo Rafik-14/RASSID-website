@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Download, ChevronRight } from 'lucide-react';
+import FancyButton from './FancyButton';
+import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
 import cliffLeft from '../assets/cliff_left.webp';
 import cliffRight from '../assets/cliff_right.webp';
@@ -95,21 +96,16 @@ export default function Hero({ t }) {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a 
-            href="#pricing"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-obsidian hover:bg-obsidian-2 text-paper font-semibold text-sm transition-all shadow-xl shadow-obsidian/15 hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <Download className="size-4 text-lime" />
-            <span>{t?.hero_btn_trial || "Démarrer l'essai 7 jours gratuit"}</span>
-          </a>
+          <PrimaryButton href="#pricing">
+            {t?.hero_btn_trial || "Démarrer l'essai 7 jours gratuit"}
+          </PrimaryButton>
 
-          <a 
+          <FancyButton 
             href="#console-centrale"
-            className="inline-flex items-center justify-center gap-1.5 h-12 px-8 rounded-full bg-paper-2 hover:bg-paper text-ink font-semibold text-sm transition-all border border-line shadow-sm backdrop-blur-md hover:border-ink-3"
+            className="[--fancy-cutout:var(--color-paper)]"
           >
-            <span>{t?.hero_btn_explore || "Explorer la console web"}</span>
-            <ChevronRight className="size-4 opacity-70 rtl:rotate-180" />
-          </a>
+            {t?.hero_btn_explore || "Explorer la console web"}
+          </FancyButton>
         </motion.div>
 
       </div>

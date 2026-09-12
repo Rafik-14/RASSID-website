@@ -55,7 +55,7 @@ export default function RedesignPage() {
         <FAQ isRtl={isRtl} />
 
         {/* 11. Direct Trial CTA */}
-        <ClosingCTA t={t} />
+        <ClosingCTA t={t} isRtl={isRtl} />
       </main>
 
       {/* 12. Synex Contact Cards + Basalt Water Panorama + Financial Ledger Footer */}

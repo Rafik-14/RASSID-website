@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X, Globe } from 'lucide-react';
+import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
 
 export default function Navbar({ lang, setLang }) {
@@ -93,14 +94,15 @@ export default function Navbar({ lang, setLang }) {
             <span className="font-mono text-[11px]">{lang === 'fr' ? 'العربية' : 'Français'}</span>
           </button>
 
-          {/* Supaste-style High-Contrast White Pill Button */}
-          <a 
-            href="#pricing"
-            className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white px-3 sm:px-4 py-1.5 font-display text-xs sm:text-sm font-bold text-black shadow-sm transition-all hover:bg-zinc-100 hover:scale-[1.02] active:scale-[0.98]"
+          {/* Rassid Lime Neo-Brutalist Pill Button */}
+          <PrimaryButton 
+            href="#pricing" 
+            size="sm" 
+            dark
+            icon={ArrowRight}
           >
-            <ArrowRight className="size-3.5 stroke-[2.5] rtl:rotate-180" />
-            <span>{isRtl ? 'تجربة مجانية' : "Démarrer l'essai"}</span>
-          </a>
+            {isRtl ? 'تجربة مجانية' : "Démarrer l'essai"}
+          </PrimaryButton>
 
           {/* Mobile Menu Toggle Button */}
           <button

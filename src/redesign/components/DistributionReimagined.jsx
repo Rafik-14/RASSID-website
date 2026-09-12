@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import FancyButton from './FancyButton';
+import PrimaryButton from './PrimaryButton';
 import pillBranch from '../assets/synex_pill_branch.jpg';
 import pillFlowers from '../assets/synex_pill_flowers.jpg';
 
@@ -78,22 +79,13 @@ export default function DistributionReimagined({ t, isRtl }) {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="#pricing"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-full border border-zinc-300 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm transition-all shadow-sm hover:border-zinc-400"
-          >
+          <FancyButton href="#pricing">
             {isRtl ? "طلب وصول تجريبي" : "Demander l'accès"}
-          </a>
+          </FancyButton>
 
-          <a
-            href="#console-centrale"
-            className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-full bg-black hover:bg-zinc-800 text-white font-semibold text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
-          >
-            <span>{isRtl ? "استكشاف المنصة" : "Lancer l'application"}</span>
-            <span className="grid size-5 place-items-center rounded-full bg-zinc-800 text-[#7FE300]">
-              <ArrowRight className="size-3 rtl:rotate-180" />
-            </span>
-          </a>
+          <PrimaryButton href="#console-centrale">
+            {isRtl ? "استكشاف المنصة" : "Lancer l'application"}
+          </PrimaryButton>
         </motion.div>
 
       </div>

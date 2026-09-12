@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Lock, ArrowUpRight } from 'lucide-react';
+import FancyButton from './FancyButton';
+import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
 import dashboardConsole from '../assets/dashboard_console.webp';
 
@@ -88,21 +90,18 @@ export default function WebDashboardSection({ t }) {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <a 
+            <PrimaryButton 
               href="https://app.rassid.dz"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 font-semibold text-sm text-black shadow-xl transition-all hover:bg-zinc-100 hover:scale-[1.02] active:scale-[0.98]"
+              dark
+              icon={ArrowUpRight}
             >
-              <span>{t?.dashboard_section_btn_console || "Ouvrir la Console"}</span>
-              <ArrowUpRight className="size-4" />
-            </a>
-            <a 
-              href="#pricing"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-8 py-3.5 text-sm font-semibold text-zinc-200 backdrop-blur-md transition-all hover:border-white/30 hover:bg-white/[0.08]"
-            >
-              <span>{t?.dashboard_section_btn_demo || "Découvrir les fonctionnalités"}</span>
-            </a>
+              {t?.dashboard_section_btn_console || "Ouvrir la Console"}
+            </PrimaryButton>
+            <FancyButton href="#pricing" dark>
+              {t?.dashboard_section_btn_demo || "Découvrir les fonctionnalités"}
+            </FancyButton>
           </motion.div>
 
         </div>
