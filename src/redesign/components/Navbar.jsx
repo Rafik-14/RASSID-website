@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
 
-export default function Navbar({ lang, setLang }) {
+export default function Navbar({ lang, setLang, t }) {
   const isRtl = lang === 'ar';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -17,10 +17,10 @@ export default function Navbar({ lang, setLang }) {
   }, []);
 
   const navLinks = [
-    { href: '#console-centrale', label: isRtl ? 'لوحة التحكم' : 'Grand Livre' },
-    { href: '#pourquoi-rassid', label: isRtl ? 'لماذا رصيد' : 'Pourquoi RASSID' },
-    { href: '#pricing', label: isRtl ? 'الأسعار' : 'Tarifs DZD' },
-    { href: '#faq', label: isRtl ? 'الأسئلة الشائعة' : 'FAQ' },
+    { href: '#console-centrale', label: t?.nav_console || (isRtl ? 'لوحة التحكم' : 'Grand Livre') },
+    { href: '#pourquoi-rassid', label: t?.nav_why || (isRtl ? 'لماذا رصيد' : 'Pourquoi RASSID') },
+    { href: '#pricing', label: t?.nav_pricing || (isRtl ? 'الأسعار' : 'Tarifs DZD') },
+    { href: '#faq', label: t?.nav_faq || (isRtl ? 'الأسئلة الشائعة' : 'FAQ') },
   ];
 
   return (
@@ -64,7 +64,7 @@ export default function Navbar({ lang, setLang }) {
             className="size-7 sm:size-8 rounded-[8px] sm:rounded-[9px] object-cover shadow-sm ring-1 ring-white/15" 
           />
           <span className="font-display text-sm sm:text-base font-bold tracking-tight text-white">
-            {isRtl ? 'رصيد' : 'Rassid'}
+            {t?.nav_brand || (isRtl ? 'رصيد' : 'Rassid')}
           </span>
         </a>
 
@@ -87,7 +87,7 @@ export default function Navbar({ lang, setLang }) {
           {/* Language Switcher */}
           <button 
             onClick={() => setLang(lang === 'fr' ? 'ar' : 'fr')}
-            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-400 hover:text-white transition-colors px-1.5 sm:px-2 py-1 rounded-md"
+            className="inline-flex items-center gap-1 text-xs font-semibold text-zinc-400 hover:text-white transition-colors px-1.5 sm:px-2 py-1 rounded-md cursor-pointer"
             title={lang === 'fr' ? 'Passer en Arabe' : 'Changer en Français'}
           >
             <Globe className="size-3 text-zinc-400" />
@@ -99,9 +99,9 @@ export default function Navbar({ lang, setLang }) {
             href="#pricing" 
             size="sm" 
             dark
-            icon={ArrowRight}
+            className="hidden sm:inline-flex"
           >
-            {isRtl ? 'تجربة مجانية' : "Démarrer l'essai"}
+            {t?.nav_cta || (isRtl ? 'تجربة مجانية' : "Démarrer l'essai")}
           </PrimaryButton>
 
           {/* Mobile Menu Toggle Button */}

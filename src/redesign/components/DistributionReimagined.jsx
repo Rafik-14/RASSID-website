@@ -81,11 +81,11 @@ export default function DistributionReimagined({ t, isRtl }) {
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <FancyButton href="#pricing">
-            {isRtl ? "طلب وصول تجريبي" : "Demander l'accès"}
+            {isRtl ? "طلب تجربة على شاحناتك" : "Demander un essai sur vos camions"}
           </FancyButton>
 
           <PrimaryButton href="#console-centrale">
-            {isRtl ? "استكشاف المنصة" : "Lancer l'application"}
+            {isRtl ? "استكشاف المميزات" : "Découvrir les fonctionnalités"}
           </PrimaryButton>
         </motion.div>
 

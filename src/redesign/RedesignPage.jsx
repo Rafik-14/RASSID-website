@@ -29,6 +29,7 @@ export default function RedesignPage() {
       <Navbar 
         lang={lang} 
         setLang={setLang} 
+        t={t}
       />
 
       {/* Main Content Flow: Synex + Aave Integrated Architecture */}

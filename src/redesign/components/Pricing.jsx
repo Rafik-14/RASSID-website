@@ -11,16 +11,16 @@ export default function Pricing({ t, isRtl }) {
 
   const orgWaUrl = isRtl
     ? "https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20(ORGANISATION)"
-    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20plan%20ORGANISATION%20(flotte%20avec%20console%20web)";
+    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20plan%20ORGANISATION%20(flotte%20avec%20console%20web%20centrale)";
 
   const soloFeatures = isRtl ? [
     "تطبيق أندرويد يعمل 100% بدون إنترنت (SQLite)",
     "سجل حسابات مشفر وموثق رياضياً SHA-256",
     "فواتير ومتابعة ديون المحلات في جولتك",
-    "تطبيق صارم لقاعدة عدم نزول الرصيد تحت الصفر",
+    "تطبيق صارم لقاعدة منع نزول الرصيد تحت الصفر",
     "طباعة وصولات حرارية فورية بلوتوث 58/80 ملم",
     "مزامنة سحابية تلقائية فور توفر الشبكة",
-    "ترخيص فردي لسائق مستقل واحد (بدون لوحة تحكم)"
+    "دعم فني مباشر عبر واتساب بالفرنسية والعربية"
   ] : [
     "Application Android 100% hors-ligne autonome (SQLite)",
     "Grand livre scellé cryptographiquement SHA-256",
@@ -28,34 +28,34 @@ export default function Pricing({ t, isRtl }) {
     "Blocage strict des anomalies (règle anti-crédit inviolable)",
     "Impression reçus thermiques Bluetooth 58 mm et 80 mm",
     "Sauvegarde cloud automatique dès reconnexion",
-    "Licence individuelle chauffeur (sans console web centrale)"
+    "Support technique direct par WhatsApp en français & arabe"
   ];
 
   const orgFeaturesCol1 = isRtl ? [
     "كل ما هو مشمول في باقة سولو",
     "لوحة تحكم إدارية سحابية للمدير والمحاسب",
     "سائقوك ينضمون مجاناً برمز دعوة (0 دج عليهم)",
-    "مراقبة لحظية لحركة الأموال والديون",
+    "مراقبة لحظية لحركة الأموال والديون الميدانية",
     "مطابقة الصندوق وإغلاق الحساب اليومي في 5 دقائق"
   ] : [
     "Toutes les fonctionnalités de l'application Solo",
-    "Console web centrale pour le gérant et la comptabilité",
-    "Chauffeurs invités gratuitement (0 DZD à leur charge)",
+    "Console web centrale pour la direction & comptabilité",
+    "Chauffeurs illimités invités par code (0 DZD pour eux)",
     "Suivi des tournées, encaissements et soldes en direct",
-    "Réconciliation de caisse & audit journalier express"
+    "Réconciliation de caisse & audit journalier express en 5 min"
   ];
 
   const orgFeaturesCol2 = isRtl ? [
-    "إدارة المخزون وتوزيع السلع بين المستودع والشاحنات",
-    "صلاحيات متعددة (مدير، محاسب، سائق موزع)",
+    "إدارة المستودعات المتعددة ونقل السلع بين الشاحنات",
+    "صلاحيات متعددة (مدير عام، محاسب، سائق موزع)",
     "تصدير فوري إلى Excel (.xlsx) و CSV للمحاسب",
-    "تهيئة مخصصة وتدريب ميداني لفريقك",
-    "دعم فني متميز ومباشر مع المؤسس 7 أيام/7"
+    "تهيئة مخصصة وتكفل مجاني بإدخال سلعك وزبائنك",
+    "دعم فني مميز وذو أولوية 7 أيام/7 مع المؤسس"
   ] : [
-    "Gestion multi-dépôts et transferts de stocks camions",
+    "Gestion multi-dépôts & transferts de stocks camions",
     "Rôles & permissions (Directeur, Comptable, Chauffeurs)",
     "Exports comptables Excel (.xlsx) & CSV en un clic",
-    "Déploiement sur mesure & formation de votre équipe",
+    "Déploiement personnalisé & import gratuit de vos articles",
     "Support prioritaire VIP 7j/7 direct avec le fondateur"
   ];
 
@@ -115,6 +115,13 @@ export default function Pricing({ t, isRtl }) {
               </span>
             </button>
           </div>
+
+          {/* Loss Aversion Anchoring Note */}
+          {t?.pricing_anchor && (
+            <p className="mt-5 text-xs sm:text-sm text-zinc-500 font-medium max-w-xl text-center">
+              💡 {t.pricing_anchor}
+            </p>
+          )}
 
         </div>
 

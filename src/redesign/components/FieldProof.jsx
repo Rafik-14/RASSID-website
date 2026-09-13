@@ -2,8 +2,8 @@ import { CheckCircle2, Quote, Truck, ShieldCheck, Clock } from 'lucide-react';
 
 export default function FieldProof({ t, isRtl }) {
   const quote = isRtl
-    ? "لا مزيد من الدفاتر الضائعة، ولا حسابات تقريبية على أوراق ممزقة. رصيد منحنا وضوحاً كاملاً بشأن ما تدين به كل بقالة، وسائقونا لم يعودوا يقضون ساعتين في عد النقود ومطابقتها مساءً."
-    : "Plus de carnets perdus, plus de calculs approximatifs sur des bouts de papier sales. RASSID nous donne une clarté totale sur ce que chaque épicerie nous doit, et mes livreurs ne passent plus deux heures à recompter des billets le soir.";
+    ? "ما بقاش مشكل الدفاتر الضائعة ولا الحسابات التقريبية على أوراق مقطعة. رصيد عطانا وضوح كامل على واش تسال كل بقالة، وسائقينا ما بقاوش يضيعوا ساعتين كل عشية يعاودوا يحسبوا الدراهم والوصولات. كل تاجر عندو وصل مطبوع بالرصيد القديم والرصيد الجديد : نزاعات الكريدي اختفت تماماً."
+    : "Plus de carnets perdus, plus de calculs approximatifs sur des bouts de papier sales. RASSID nous donne une clarté totale sur ce que chaque épicerie nous doit, et mes livreurs ne passent plus deux heures à recompter des liasses de billets le soir. Chaque commerçant a son ticket imprimé avec son ancien solde et son nouveau solde : les contestations de crédit ont tout simplement disparu.";
 
   return (
     <section id="temoignage" className="relative py-20 sm:py-28 lg:py-32 bg-white overflow-hidden">
@@ -42,7 +42,7 @@ export default function FieldProof({ t, isRtl }) {
                   isRtl ? 'font-sans' : 'font-mono tracking-wider'
                 }`}>
                   <span className="size-1.5 rounded-full bg-[#7FE300] inline-block animate-pulse" />
-                  <span>{isRtl ? "شهادة ميدانية حية" : "Retour Terrain"}</span>
+                  <span>{t?.field_proof_badge || (isRtl ? "شهادة ميدانية حية" : "Retour Terrain")}</span>
                 </div>
 
                 {/* Company & Role */}
@@ -56,7 +56,7 @@ export default function FieldProof({ t, isRtl }) {
                     {t?.field_proof_author_company || (isRtl ? "تاجر جملة وموزّع مواد غذائية" : "Grossiste Agroalimentaire")}
                   </h4>
                   <p className="mt-1 text-xs sm:text-sm text-zinc-400 font-medium">
-                    {t?.field_proof_author_location || (isRtl ? "البليدة / الجزائر" : "Blida / Alger")}
+                    {t?.field_proof_author_location || (isRtl ? "البليدة · الجزائر · بومرداس" : "Blida · Alger · Boumerdès")}
                   </p>
                 </div>
 
