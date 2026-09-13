@@ -181,7 +181,7 @@ export default function FAQ({ t, isRtl }) {
                 onClick={handlePrev}
                 disabled={activeIndex === 0}
                 aria-label={t?.faq_prev || "Précédent"}
-                className="size-11 rounded-full border border-zinc-300/90 bg-white text-zinc-900 flex items-center justify-center transition-all shadow-sm hover:bg-zinc-100 hover:border-zinc-400 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                className="size-11 rounded-full border-2 border-zinc-950 bg-white text-zinc-950 flex items-center justify-center transition-all shadow-[2px_2px_0_0_#18181b] hover:shadow-[3px_3px_0_0_#18181b] hover:bg-zinc-50 active:translate-x-0.5 active:translate-y-0.5 disabled:opacity-30 disabled:shadow-none disabled:cursor-not-allowed cursor-pointer"
               >
                 {isRtl ? <ChevronRight className="size-5" /> : <ChevronLeft className="size-5" />}
               </button>
@@ -191,7 +191,7 @@ export default function FAQ({ t, isRtl }) {
                 onClick={handleNext}
                 disabled={activeIndex === faqs.length - 1}
                 aria-label={t?.faq_next || "Suivant"}
-                className="size-11 rounded-full bg-zinc-950 text-white flex items-center justify-center transition-all shadow-md hover:bg-zinc-800 active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                className="size-11 rounded-full border-2 border-zinc-950 bg-zinc-950 text-white flex items-center justify-center transition-all shadow-[2px_2px_0_0_#18181b] hover:shadow-[3px_3px_0_0_#18181b] hover:bg-zinc-800 active:translate-x-0.5 active:translate-y-0.5 disabled:opacity-30 disabled:shadow-none disabled:cursor-not-allowed cursor-pointer"
               >
                 {isRtl ? <ChevronLeft className="size-5" /> : <ChevronRight className="size-5" />}
               </button>
@@ -250,15 +250,15 @@ export default function FAQ({ t, isRtl }) {
                   tabIndex={isActive ? -1 : 0}
                   role="button"
                   aria-pressed={isActive}
-                  className={`shrink-0 min-h-[490px] sm:min-h-[530px] rounded-[30px] sm:rounded-[36px] p-8 sm:p-9 lg:p-10 flex flex-col justify-end transition-colors duration-700 select-text ${
+                  className={`shrink-0 min-h-[490px] sm:min-h-[530px] rounded-[30px] sm:rounded-[36px] p-8 sm:p-9 lg:p-10 flex flex-col justify-end transition-all duration-500 select-text ${
                     isActive
-                      ? 'bg-[#7FE300] text-zinc-950 shadow-2xl shadow-[#7FE300]/25 border border-[#70ce00] cursor-default'
-                      : 'bg-[#F0EFEA] hover:bg-[#EAE8E1] text-zinc-950 border border-black/5 hover:border-black/10 shadow-sm hover:shadow-md cursor-pointer group'
+                      ? 'bg-[#7FE300] text-zinc-950 border-2 border-zinc-950 shadow-[6px_6px_0_0_#18181b] cursor-default'
+                      : 'bg-white hover:bg-zinc-50/80 text-zinc-950 border-2 border-zinc-950 shadow-[4px_4px_0_0_#18181b] hover:shadow-[6px_6px_0_0_#18181b] cursor-pointer group'
                   }`}
                   style={{
                     pointerEvents: isPast ? 'none' : 'auto',
                     visibility: isPast ? 'hidden' : 'visible',
-                    transition: 'visibility 0.8s, background-color 0.7s, border-color 0.7s, box-shadow 0.7s'
+                    transition: 'visibility 0.8s, background-color 0.5s, border-color 0.5s, box-shadow 0.5s'
                   }}
                 >
                   {/* Active Card: Question + Full Answer anchored to bottom (top left empty) */}
@@ -296,8 +296,8 @@ export default function FAQ({ t, isRtl }) {
           <div 
             className={`pointer-events-none absolute top-0 bottom-8 w-16 sm:w-28 z-10 ${
               isRtl 
-                ? 'left-0 bg-gradient-to-r from-[#FAF9F5] via-[#FAF9F5]/80 to-transparent' 
-                : 'right-0 bg-gradient-to-l from-[#FAF9F5] via-[#FAF9F5]/80 to-transparent'
+                ? 'left-0 bg-gradient-to-r from-white via-white/80 to-transparent' 
+                : 'right-0 bg-gradient-to-l from-white via-white/80 to-transparent'
             }`} 
             aria-hidden="true" 
           />
