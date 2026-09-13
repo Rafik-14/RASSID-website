@@ -46,7 +46,7 @@ export default function RedesignPage() {
         <DistributionReimagined t={t} isRtl={isRtl} />
 
         {/* 5. Customer Field Testimonial */}
-        <FieldProof isRtl={isRtl} />
+        <FieldProof t={t} isRtl={isRtl} />
 
         {/* 9. Pricing in Algerian Dinar */}
         <Pricing t={t} isRtl={isRtl} />
