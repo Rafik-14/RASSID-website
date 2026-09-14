@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import FancyButton from './FancyButton';
 import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
+import cliffLeft from '../assets/cliff_left.webp';
+import cliffRight from '../assets/cliff_right.webp';
 
 import homeScreen from '../../assets/Mobile_home_mockup.webp';
 import livraisonScreen from '../../assets/Mobile_livraison_mockup.webp';
@@ -15,7 +17,39 @@ export default function Hero({ t }) {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.02)_0%,transparent_70%)] pointer-events-none" />
 
       {/* ============================================================= */}
-      {/* EDITORIAL HEADER                                              */}
+      {/* 1. SYNEX CLIFF CUTOUT ASSETS (DESKTOP ONLY)                   */}
+      {/* ============================================================= */}
+      
+      {/* Left Mossy Basalt Cliff Cutout */}
+      <motion.div 
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="pointer-events-none absolute left-0 bottom-0 z-10 hidden sm:block w-[330px] md:w-[405px] lg:w-[475px] xl:w-[520px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+      >
+        <img 
+          src={cliffLeft} 
+          alt="Nordic mossy basalt cliff" 
+          className="w-full h-auto object-contain object-bottom block"
+        />
+      </motion.div>
+
+      {/* Right Cliff with Alpine Wildflowers Cutout */}
+      <motion.div 
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="pointer-events-none absolute right-0 bottom-0 z-10 hidden sm:block w-[330px] md:w-[405px] lg:w-[475px] xl:w-[520px] max-w-[34vw] select-none filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+      >
+        <img 
+          src={cliffRight} 
+          alt="Nordic mossy cliff with alpine wildflowers" 
+          className="w-full h-auto object-contain object-bottom block"
+        />
+      </motion.div>
+
+      {/* ============================================================= */}
+      {/* 2. EDITORIAL HEADER                                           */}
       {/* ============================================================= */}
       <div className="relative z-30 mx-auto max-w-5xl px-4 text-center flex flex-col items-center">
         
