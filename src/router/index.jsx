@@ -1,6 +1,5 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
 import HomePage from '../pages/HomePage'
-import RedesignPage from '../redesign/RedesignPage'
 
 export const router = createBrowserRouter([
   {
@@ -9,6 +8,6 @@ export const router = createBrowserRouter([
   },
   {
     path: '/redesign',
-    element: <RedesignPage />,
+    element: <Navigate to="/" replace />,
   },
 ])

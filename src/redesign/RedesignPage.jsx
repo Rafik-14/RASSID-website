@@ -12,8 +12,20 @@ import FAQ from './components/FAQ';
 import ClosingCTA from './components/ClosingCTA';
 import Footer from './components/Footer';
 
+const STORAGE_KEY = 'rassid-lang';
+
+function getInitialLang() {
+  if (typeof window === 'undefined') return 'fr';
+  try {
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    return saved === 'ar' || saved === 'fr' ? saved : 'fr';
+  } catch {
+    return 'fr';
+  }
+}
+
 export default function RedesignPage() {
-  const [lang, setLang] = useState('fr');
+  const [lang, setLang] = useState(getInitialLang);
 
   const t = translations[lang] || translations.fr;
   const isRtl = lang === 'ar';
@@ -21,6 +33,11 @@ export default function RedesignPage() {
   useEffect(() => {
     document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lang);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, lang);
+    } catch {
+      // storage unavailable (private mode)
+    }
   }, [lang, isRtl]);
 
   return (
