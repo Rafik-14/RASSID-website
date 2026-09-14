@@ -116,8 +116,8 @@ function PillPatternBackground() {
  */
 export default function ClosingCTA({ t, isRtl }) {
   const waUrl = isRtl
-    ? "https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%AF%D8%A1%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%80%207%20%D8%A3%D9%8A%D8%A7%D9%85%20%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%B1%D8%B5%D9%8A%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%A4%D8%B3%D8%B3%D8%AA%D9%8A%20%D9%84%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9"
-    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20lancer%20l'essai%20gratuit%20de%207%20jours%20de%20RASSID%20pour%20ma%20distribution";
+    ? "https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%AF%D8%A1%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%80%20%D8%B4%D9%87%D8%B1%20%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%B1%D8%B5%D9%8A%D8%AF%20%D9%81%D9%8A%20%D9%85%D8%A4%D8%B3%D8%B3%D8%AA%D9%8A%20%D9%84%D9%84%D8%AA%D9%88%D8%B2%D9%8A%D8%B9"
+    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20lancer%20l'essai%20gratuit%20de%201%20mois%20de%20RASSID%20pour%20ma%20distribution";
 
   return (
     <section id="trial" className="relative py-28 sm:py-36 lg:py-44 bg-[#FAF9F5] border-t border-zinc-200/80 overflow-hidden">
@@ -133,16 +133,16 @@ export default function ClosingCTA({ t, isRtl }) {
           {/* "Join Rassid" Pill Badge */}
           <div className="mb-5 sm:mb-7 inline-flex items-center justify-center">
             <span className="inline-flex items-center px-5 py-1.5 sm:px-6 sm:py-2 rounded-full border-2 border-black bg-white text-zinc-950 font-bold text-sm sm:text-base tracking-tight shadow-sm">
-              {t?.cta_join_pill || "Join Rassid"}
+              {t?.cta_join_pill || "Essayez RASSID"}
             </span>
           </div>
 
           <h2 className="font-display text-[clamp(2.5rem,5.2vw,4.6rem)] font-bold text-zinc-950 tracking-[-0.04em] leading-[1.08] text-balance">
-            {t?.cta_title || "Prenez le contrôle de vos tournées."}
+            {t?.cta_title || "1 mois gratuit. Sur vos vrais camions."}
           </h2>
 
           <p className="mt-5 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-zinc-600 font-medium leading-relaxed max-w-2xl text-balance">
-            {t?.cta_desc || "7 jours d'essai gratuit sur vos camions réels. Sans engagement."}
+            {t?.cta_desc || "Sans carte bancaire. Sans engagement. Commencez maintenant."}
           </p>
 
         </div>

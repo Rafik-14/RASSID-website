@@ -12,56 +12,56 @@ export default function FAQ({ t, isRtl }) {
     {
       id: "01",
       q: isRtl 
-        ? "هل يلزم وجود اتصال بالإنترنت للعمل في الميدان؟" 
-        : "Faut-il obligatoirement une connexion Internet pour travailler sur le terrain ?",
+        ? "واش يخدم بلا إنترنت؟" 
+        : "Est-ce que ça marche sans internet ?",
       a: isRtl 
-        ? "لا، إطلاقاً. تطبيق رصيد يعمل 100% بدون إنترنت. كل العمليات (تسليم، تحصيل، إرجاع) تسجل في قاعدة بيانات SQLite محلية مشفرة على هاتف السائق. وعند توفر أول شبكة إنترنت (3G/4G أو واي فاي في المستودع) تتم المزامنة تلقائياً في الخلفية."
-        : "Non, absolument pas. L'application mobile RASSID est conçue en offline-first absolu. Vos livreurs peuvent descendre dans les sous-sols les plus isolés et enregistrer des ventes à toute vitesse. Les données sont sauvegardées dans une base SQLite chiffrée sur le téléphone et se synchronisent avec la base centrale dès qu'une connexion (3G/4G ou Wi-Fi du dépôt) est rétablie."
+        ? "إيه، 100%. رصيد يحفظ كلشي في التيليفون. تسليمات، خلاصات، وصولات — كلشي يخدم حتى في تحت الأرض بلا شبكة. كي يرجع النت، كلشي يتزامن أوتوماتيك."
+        : "Oui, 100%. RASSID sauvegarde tout sur le téléphone. Livraisons, paiements, bons — tout fonctionne même dans un sous-sol sans réseau. Quand le réseau revient, tout se synchronise automatiquement."
     },
     {
       id: "02",
       q: isRtl 
-        ? "هل لوحة تحكم الإدارة مشمولة في سعر الاشتراك؟" 
-        : "Le tableau de bord web de direction est-il inclus dans l'abonnement ?",
+        ? "كيفاش نطبع الوصولات؟" 
+        : "Comment ça marche pour imprimer les bons ?",
       a: isRtl 
-        ? "نعم، بالتأكيد. كل اشتراك يمنحك حق الوصول إلى تطبيق الهاتف لسائقي التوزيع، ولوحة التحكم السحابية المخصصة للمدير، المحاسب ومسؤولي المبيعات لمراقبة الديون والمخزون وحركة الأموال بدون أي مصاريف خفية."
-        : "Oui, sans aucun supplément. Chaque forfait donne accès à l'application mobile de tournée pour vos chauffeurs ainsi qu'à la console web de supervision pour le directeur, le chef des ventes et la comptabilité, sans surcoût caché."
+        ? "السوّاق يدير طابعة بلوتوث صغيرة على الحزام. بعد كل تسليم ولا خلاص، كليك واحد والوصل يطلع في 3 ثواني. الزبون ياخذ الورقة ديالو في بلاصته."
+        : "Le chauffeur porte une petite imprimante Bluetooth à la ceinture. Après chaque livraison ou paiement, un clic et le bon sort en 3 secondes. Le client garde sa preuve papier sur place."
     },
     {
       id: "03",
       q: isRtl 
-        ? "ما هي الطابعات الحرارية المتوافقة مع التطبيق في الجزائر؟" 
-        : "Quelles imprimantes thermiques sont compatibles en Algérie ?",
+        ? "السوّاق ديالي ماشي فاهم في التكنولوجيا. واش صعيبة؟" 
+        : "Mon chauffeur n'est pas doué avec la technologie. C'est compliqué ?",
       a: isRtl 
-        ? "رصيد متوافق مع كافة طابعات البلوتوث الحرارية المحمولة قياس 58 ملم و 80 ملم المتداولة في السوق الجزائري مثل Xprinter و Netum و Epson. الاقتران يتم في ثوانٍ معدودة مباشرة من داخل التطبيق لطباعة وصولات فورية للزبائن."
-        : "RASSID supporte toutes les imprimantes thermiques Bluetooth portables 58mm et 80mm courantes en Algérie (Xprinter, Netum, Epson, etc.). L'association Bluetooth se fait en 3 clics directement depuis l'application pour délivrer des bons clairs et infalsifiables."
+        ? "لا. التطبيق مصمّم للميدان، ماشي للمهندسين. بوطون أخضر كبير باش تسجّل، أرقام واضحة، وهذاك هو. أكبر السوّاقة تاعنا يخدمو بيها بلا مشكل."
+        : "Non. L'application est faite pour le terrain, pas pour les ingénieurs. Un gros bouton vert pour enregistrer, des chiffres clairs, et c'est tout. Nos chauffeurs les plus âgés l'utilisent sans problème."
     },
     {
       id: "04",
       q: isRtl 
-        ? "كيف تبدأ التجربة المجانية لمدة 7 أيام في الميدان؟" 
-        : "Comment se passe l'essai gratuit de 7 jours sur vos camions ?",
+        ? "واش يصرا إذا التيليفون تكسّر ولا ضاع؟" 
+        : "Qu'est-ce qui se passe si le téléphone se casse ou se perd ?",
       a: isRtl 
-        ? "تتواصل معنا مباشرة عبر واتساب أو الاتصال الهاتفي. نقوم بتهيئة فضاء شركتك وإدخال قائمة السلع والمحلات التجريبية خلال 24 ساعة، وتثبت التطبيق على هاتف سائقك لتجربته في جولة حقيقية دون دفع أي دينار أو إدخال بطاقة بنكية."
-        : "Contactez-nous directement par WhatsApp ou téléphone. Nous configurons votre espace en 24h avec vos articles et vos premiers magasins clients. Vous installez l'application sur le téléphone d'un chauffeur et testez sur une vraie tournée sans sortir votre carte bancaire."
+        ? "كل المعلومات محفوظة بالأمان. نركّبو التطبيق في التيليفون الجديد وكلشي يرجع أوتوماتيك — تسليمات، ديون، تاريخ. والو ما يضيع."
+        : "Toutes les données sont sauvegardées en sécurité. On installe l'application sur le nouveau téléphone et tout revient automatiquement — livraisons, dettes, historique. Rien n'est perdu."
     },
     {
       id: "05",
       q: isRtl 
-        ? "كيف يمنع رصيد التلاعب وفروقات الصندوق والنزاعات؟" 
-        : "Comment RASSID empêche-t-il les fraudes et les litiges de caisse ?",
+        ? "بشحال؟ كاين فريّ كاشي؟" 
+        : "C'est combien ? Il y a des frais cachés ?",
       a: isRtl 
-        ? "كل عملية (بيع، تحصيل، إرجاع) تُقفل بتوقيع رياضي مشفر SHA-256 يستحيل تزويره. لا يمكن حذف أي عملية في الخفاء: أي تصحيح يُسجل كإلغاء رسمي موثق ومطابق يُشعر الإدارة فوراً."
-        : "Chaque opération (livraison, encaissement, retour) est scellée par une signature cryptographique SHA-256 infalsifiable. Une opération ne peut jamais être effacée ou modifiée en douce : toute correction génère une contre-passation d'annulation officielle et notifiée à la direction."
+        ? "بلان سولو يبدا من 24 000 دج لـ 6 أشهر. كلشي فيه، بدون تكاليف مخفية. للأساطيل، نديرو سعر مخصّص حسب عدد الشاحنات. وتقدر تجرّب شهر بالمجان قبل ما تقرر."
+        : "Le plan Solo commence à 24 000 DA pour 6 mois. Tout est inclus, pas de frais cachés. Pour les flottes, on fait un prix personnalisé selon le nombre de camions. Et vous pouvez essayer 1 mois gratuitement avant de décider."
     },
     {
       id: "06",
       q: isRtl 
-        ? "هل يمكنني تصدير البيانات إلى برنامج المحاسبة أو ملفات إكسل؟" 
-        : "Puis-je exporter mes données vers Excel ou mon logiciel comptable ?",
+        ? "هل يقدر المسيّر يشوف واش يدير السائق؟" 
+        : "Est-ce que le patron peut voir ce que fait le chauffeur ?",
       a: isRtl 
-        ? "نعم، بنقرة واحدة من لوحة التحكم، يمكنك تصدير سجلات المبيعات، المقبوضات، كشوف حسابات الزبائن وجرد المخزون بصيغة Excel أو CSV المتوافقة مباشرة مع برامج المحاسبة الجزائرية."
-        : "Oui. En un clic depuis la console web, vous exportez l'ensemble de vos journaux de ventes, encaissements, soldes clients et stocks au format Excel (.xlsx) ou CSV, directement exploitables par votre comptable."
+        ? "نعم. عند المسيّر لوحة تحكم ويب تبيّن له في اللحظة: التسليمات، الخلاصات، ديون كل حانوت، مخزون كل شاحنة، وحتى الموقع GPS تاع كل عملية. وفي المساء، مراقبة الصندوق تأخذ 30 ثانية فقط."
+        : "Oui. Le patron a une console web qui montre en temps réel : les livraisons, les paiements, les dettes de chaque magasin, le stock de chaque camion, et même l'emplacement GPS de chaque opération. Le soir, la vérification de la caisse prend 30 secondes."
     }
   ], [isRtl]);
 
@@ -169,8 +169,8 @@ export default function FAQ({ t, isRtl }) {
           <div className="flex flex-col sm:items-end gap-5">
             <p className="text-sm sm:text-base text-zinc-600 max-w-md leading-relaxed text-left rtl:text-right sm:text-right rtl:sm:text-left">
               {t?.faq_desc || (isRtl 
-                ? "إجابات واضحة ومباشرة حول تشغيل رصيد، نظام العمل بدون إنترنت، وإدارة جولات التوزيع في الميدان." 
-                : "Trouvez les réponses directes sur le fonctionnement de RASSID, le mode hors-ligne absolu et la gestion de vos tournées réelles."
+                ? "الأجوبة على الأسئلة اللي يسقسونا عليها بزاف." 
+                : "Les réponses aux questions qu'on nous pose le plus."
               )}
             </p>
 

@@ -1,7 +1,7 @@
 export default function FieldProof({ t, isRtl }) {
   const quote = isRtl
-    ? "لا مزيد من الدفاتر الضائعة، ولا حسابات تقريبية على أوراق ممزقة. رصيد منحنا وضوحاً كاملاً بشأن ما تدين به كل بقالة، وسائقونا لم يعودوا يقضون ساعتين في عد النقود ومطابقتها مساءً."
-    : "Plus de carnets perdus, plus de calculs approximatifs sur des bouts de papier sales. RASSID nous donne une clarté totale sur ce que chaque épicerie nous doit, et mes livreurs ne passent plus deux heures à recompter des billets le soir.";
+    ? "قبل، كنّا نخسرو الفلوس بلا ما نعرفو وين. الكرّاسات تضيع، السائقين ينساو، والزبائن ينكرو. مع رصيد، كل دينار محسوب. في المساء، حساب الصندوق يخرج مضبوط في 30 ثانية. ما نرجعوش للوراء."
+    : "Avant, on perdait de l'argent sans savoir où. Les cahiers se perdaient, les chauffeurs oubliaient, les clients niaient. Avec RASSID, chaque dinar est tracé. Le soir, la caisse tombe juste en 30 secondes. On ne revient plus en arrière.";
 
   return (
     <section id="temoignage" className="relative py-20 sm:py-28 lg:py-32 bg-white overflow-hidden">
@@ -52,15 +52,15 @@ export default function FieldProof({ t, isRtl }) {
                 <div className="text-xs sm:text-sm font-medium text-zinc-600 leading-snug">
                   <span className="text-[#3f7c00] font-black text-base mr-1.5">—</span>
                   <span className="font-black text-zinc-950">
-                    {t?.field_proof_author_role || (isRtl ? "الإدارة العامة" : "Direction Générale")}
+                    {t?.field_proof_author_role || (isRtl ? "المدير" : "Gérant")}
                   </span>
                   <span className="mx-1 text-zinc-400">·</span>
                   <span>
-                    {t?.field_proof_author_company || (isRtl ? "تاجر جملة وموزّع مواد غذائية" : "Grossiste & Distributeur Agroalimentaire")}
+                    {t?.field_proof_author_company || (isRtl ? "تاجر جملة وموزّع" : "Grossiste & Distributeur")}
                   </span>
                   <span className="mx-1 text-zinc-400">·</span>
                   <span className="text-zinc-500">
-                    {t?.field_proof_author_location || (isRtl ? "البليدة / الجزائر" : "Blida / Alger")}
+                    {t?.field_proof_author_location || (isRtl ? "البليدة · الجزائر" : "Blida · Alger")}
                   </span>
                 </div>
               </div>

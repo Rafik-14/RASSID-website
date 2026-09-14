@@ -65,7 +65,7 @@ export default function Hero({ t }) {
             className="w-8 h-8 sm:w-9 sm:h-9 object-cover rounded-xl shadow-sm ring-1 ring-black/10" 
           />
           <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-zinc-600 font-mono">
-            {t?.hero_badge || "RASSID Mobile v3.0"}
+            {t?.hero_badge || "Rassid app"}
           </span>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function Hero({ t }) {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-display text-[clamp(2.3rem,5vw,4.2rem)] font-extrabold text-obsidian leading-[1.1] tracking-[-0.03em] max-w-4xl mx-auto"
         >
-          <span>{t?.hero_synex_h1_light || "Chaque dinar dû, scellé au comptoir."}</span>
+          <span>{t?.hero_synex_h1_light || "Vos tournées. Vos créances."}</span>
           {t?.hero_synex_h1_dark && (
             <>
               <br className="hidden sm:inline" />{' '}
@@ -94,7 +94,7 @@ export default function Hero({ t }) {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-4 max-w-2xl text-[15px] sm:text-[17px] text-ink-2 font-medium leading-relaxed"
         >
-          {t?.hero_synex_sub_short || t?.hero_synex_sub || "Toute la gestion de vos tournées au creux de la main. Encaissements, créances et stocks camions verrouillés, 100% hors-ligne sur le terrain."}
+          {t?.hero_synex_sub_short || t?.hero_synex_sub || "Enregistrez les livraisons, suivez les dettes et imprimez les bons — même sans internet."}
         </motion.p>
 
         {/* Action Button Pair */}
@@ -105,33 +105,15 @@ export default function Hero({ t }) {
           className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <PrimaryButton href="#pricing">
-            {t?.hero_btn_trial || "Démarrer l'essai 7 jours sur vos camions"}
+            {t?.hero_btn_trial || "Essai gratuit 1 mois"}
           </PrimaryButton>
 
           <FancyButton 
             href="#console-centrale"
             className="[--fancy-cutout:var(--color-paper)]"
           >
-            {t?.hero_btn_explore || "Voir la console web du patron ↓"}
+            {t?.hero_btn_explore || "Voir la console du patron ↓"}
           </FancyButton>
-        </motion.div>
-
-        {/* Risk Reversal Trust Microcopy Pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px] sm:text-xs text-zinc-500 font-medium"
-        >
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.04] border border-black/[0.06]">
-            ✓ {t?.hero_inv_1 || "Sans carte bancaire"}
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.04] border border-black/[0.06]">
-            ✓ {t?.hero_inv_2 || "Reçus thermiques Bluetooth 58/80 mm"}
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/[0.04] border border-black/[0.06]">
-            ✓ {t?.hero_inv_3 || "Scellement SHA-256"}
-          </span>
         </motion.div>
 
       </div>

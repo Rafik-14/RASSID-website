@@ -14,49 +14,49 @@ export default function Pricing({ t, isRtl }) {
     : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20plan%20ORGANISATION%20(flotte%20avec%20console%20web%20centrale)";
 
   const soloFeatures = isRtl ? [
-    "تطبيق أندرويد يعمل 100% بدون إنترنت (SQLite)",
-    "سجل حسابات مشفر وموثق رياضياً SHA-256",
-    "فواتير ومتابعة ديون المحلات في جولتك",
-    "تطبيق صارم لقاعدة منع نزول الرصيد تحت الصفر",
-    "طباعة وصولات حرارية فورية بلوتوث 58/80 ملم",
-    "مزامنة سحابية تلقائية فور توفر الشبكة",
-    "دعم فني مباشر عبر واتساب بالفرنسية والعربية"
+    "تسليمات، خلاصات، مرتجعات، إشعارات",
+    "متابعة ديون كل حانوت",
+    "طباعة الوصولات بالبلوتوث",
+    "مخزون الشاحنة في اللحظة",
+    "يخدم 100% بلا إنترنت",
+    "تنبيهات التأخّر (+10 أيام)",
+    "مصاريف الطريق (مازوط، صيانة)"
   ] : [
-    "Application Android 100% hors-ligne autonome (SQLite)",
-    "Grand livre scellé cryptographiquement SHA-256",
-    "Fiches magasins et suivi strict des créances de tournée",
-    "Blocage strict des anomalies (règle anti-crédit inviolable)",
-    "Impression reçus thermiques Bluetooth 58 mm et 80 mm",
-    "Sauvegarde cloud automatique dès reconnexion",
-    "Support technique direct par WhatsApp en français & arabe"
+    "Livraisons, paiements, retours, avoirs",
+    "Suivi des dettes par magasin",
+    "Impression Bluetooth des bons",
+    "Stock camion en temps réel",
+    "Fonctionne 100% hors-ligne",
+    "Alertes impayés (+10 jours)",
+    "Dépenses de route (carburant, entretien)"
   ];
 
   const orgFeaturesCol1 = isRtl ? [
-    "كل ما هو مشمول في باقة سولو",
-    "لوحة تحكم إدارية سحابية للمدير والمحاسب",
-    "سائقوك ينضمون مجاناً برمز دعوة (0 دج عليهم)",
-    "مراقبة لحظية لحركة الأموال والديون الميدانية",
-    "مطابقة الصندوق وإغلاق الحساب اليومي في 5 دقائق"
+    "كل مميزات بلان سولو",
+    "لوحة تحكم ويب للمسيّر",
+    "مراقبة الصندوق في المساء",
+    "موقع العمليات GPS",
+    "مراقبة الأسعار الدنيا"
   ] : [
-    "Toutes les fonctionnalités de l'application Solo",
-    "Console web centrale pour la direction & comptabilité",
-    "Chauffeurs illimités invités par code (0 DZD pour eux)",
-    "Suivi des tournées, encaissements et soldes en direct",
-    "Réconciliation de caisse & audit journalier express en 5 min"
+    "Tout le plan Solo inclus",
+    "Console web pour le patron",
+    "Vérification de la caisse le soir",
+    "GPS des opérations",
+    "Contrôle des prix minimums"
   ];
 
   const orgFeaturesCol2 = isRtl ? [
-    "إدارة المستودعات المتعددة ونقل السلع بين الشاحنات",
-    "صلاحيات متعددة (مدير عام، محاسب، سائق موزع)",
-    "تصدير فوري إلى Excel (.xlsx) و CSV للمحاسب",
-    "تهيئة مخصصة وتكفل مجاني بإدخال سلعك وزبائنك",
-    "دعم فني مميز وذو أولوية 7 أيام/7 مع المؤسس"
+    "مخزون الشاحنة مع تسجيل الخسائر",
+    "المصادقة على الحوانيت الجداد",
+    "متابعة المصاريف حسب السائق",
+    "تصدير Excel / CSV",
+    "عدد غير محدود من السائقين (بالمجان)"
   ] : [
-    "Gestion multi-dépôts & transferts de stocks camions",
-    "Rôles & permissions (Directeur, Comptable, Chauffeurs)",
-    "Exports comptables Excel (.xlsx) & CSV en un clic",
-    "Déploiement personnalisé & import gratuit de vos articles",
-    "Support prioritaire VIP 7j/7 direct avec le fondateur"
+    "Stock camion avec validation pertes",
+    "Validation des nouveaux magasins",
+    "Suivi des dépenses par chauffeur",
+    "Export Excel / CSV",
+    "Nombre illimité de chauffeurs (gratuit)"
   ];
 
   return (
@@ -72,16 +72,16 @@ export default function Pricing({ t, isRtl }) {
           {/* Badge Pill */}
           <div className="mb-4 inline-flex items-center justify-center">
             <span className="inline-flex items-center px-4 py-1 rounded-full border border-zinc-900/10 bg-zinc-100 text-zinc-900 font-mono text-xs font-bold tracking-wider uppercase">
-              {t?.pricing_badge || "TARIFS & FORMULES"}
+              {t?.pricing_badge || "TARIFS"}
             </span>
           </div>
 
           <h2 className="font-display text-[clamp(2.3rem,4.8vw,3.8rem)] font-extrabold text-zinc-950 tracking-tight leading-[1.12] text-balance">
-            {t?.pricing_title || "Des formules taillées pour votre réalité terrain."}
+            {t?.pricing_title || "Simple et clair. Pas de surprises."}
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-zinc-600 font-medium leading-relaxed max-w-2xl text-balance">
-            {t?.pricing_sub || "Que vous soyez chauffeur indépendant ou patron d'une flotte avec dépôt, chaque dinar est tracé sans mauvaise surprise."}
+            {t?.pricing_sub || "Un seul prix, tout inclus. Essayez 1 mois gratuitement avant de décider."}
           </p>
 
           {/* Neo-brutalist Billing Cycle Switcher (Inspired by Uiverse Andrew Demchenko) */}
@@ -116,13 +116,6 @@ export default function Pricing({ t, isRtl }) {
             </button>
           </div>
 
-          {/* Loss Aversion Anchoring Note */}
-          {t?.pricing_anchor && (
-            <p className="mt-5 text-xs sm:text-sm text-zinc-500 font-medium max-w-xl text-center">
-              💡 {t.pricing_anchor}
-            </p>
-          )}
-
         </div>
 
         {/* Pricing Cards Grid (Solo: 5 cols, Org: 7 cols) */}
@@ -137,7 +130,7 @@ export default function Pricing({ t, isRtl }) {
               {/* Badge */}
               <div className="inline-flex">
                 <span className="px-3.5 py-1 rounded-full border border-zinc-950/25 bg-black/10 text-zinc-950 text-[11px] font-bold uppercase tracking-wider">
-                  {t?.pricing_solo_badge || "INDÉPENDANT"}
+                  {t?.pricing_solo_badge || "CHAUFFEUR INDÉPENDANT"}
                 </span>
               </div>
 
@@ -148,7 +141,7 @@ export default function Pricing({ t, isRtl }) {
 
               {/* Subtitle */}
               <p className="mt-2.5 text-xs sm:text-sm text-zinc-950/85 font-medium leading-relaxed">
-                {t?.pricing_solo_desc || "L'application mobile complète pour un chauffeur autonome qui gère sa propre tournée."}
+                {t?.pricing_solo_desc || "Pour un chauffeur qui gère sa propre tournée."}
               </p>
 
               {/* Features List (Single Column with clean checkmarks) */}
@@ -196,7 +189,7 @@ export default function Pricing({ t, isRtl }) {
                 icon={ArrowRight}
                 className="shrink-0"
               >
-                {t?.pricing_solo_btn || "Démarrer l'essai 7j"}
+                {t?.pricing_solo_btn || "Essai gratuit 1 mois"}
               </PrimaryButton>
 
             </div>
@@ -219,7 +212,7 @@ export default function Pricing({ t, isRtl }) {
               {/* Badge */}
               <div className="inline-flex items-center gap-2">
                 <span className="px-3.5 py-1 rounded-full border border-white/20 bg-white/5 text-white text-[11px] font-bold uppercase tracking-wider">
-                  {t?.pricing_org_badge || "RECOMMANDÉ · FLOTTES & DÉPÔTS"}
+                  {t?.pricing_org_badge || "RECOMMANDÉ · POUR LES FLOTTES"}
                 </span>
               </div>
 
@@ -230,7 +223,7 @@ export default function Pricing({ t, isRtl }) {
 
               {/* Subtitle */}
               <p className="mt-2.5 text-xs sm:text-sm text-zinc-300 font-medium leading-relaxed max-w-2xl">
-                {t?.pricing_org_desc || "Abonnement global entreprise : le gérant souscrit le forfait, et invite toute son équipe de chauffeurs sans aucun frais pour eux."}
+                {t?.pricing_org_desc || "Le patron s'abonne et invite ses chauffeurs gratuitement."}
               </p>
 
               {/* Free Drivers Highlight Banner */}
@@ -286,7 +279,7 @@ export default function Pricing({ t, isRtl }) {
                 </div>
                 <p className="text-[11px] text-[#7FE300] mt-0.5 font-bold flex items-center gap-1.5">
                   <span className="size-1.5 rounded-full bg-[#7FE300] inline-block animate-pulse" />
-                  <span>{t?.pricing_org_badge_custom || "Tarif personnalisé après échange"}</span>
+                  <span>{t?.pricing_org_badge_custom || "Prix personnalisé après échange"}</span>
                 </p>
               </div>
 

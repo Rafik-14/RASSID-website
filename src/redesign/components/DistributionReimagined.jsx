@@ -17,7 +17,7 @@ export default function DistributionReimagined({ t, isRtl }) {
           viewport={{ once: true }}
           className="mb-5 text-xs sm:text-sm font-mono tracking-[0.2em] text-zinc-500 uppercase font-medium"
         >
-          {t?.hero_synex_kicker || "DISTRIBUTION RÉINVENTÉE"}
+          {t?.hero_synex_kicker || "RASSID"}
         </motion.p>
 
         {/* Master Editorial Typography with Inline Nature Imagery Pills (2 Lines) */}
@@ -30,7 +30,7 @@ export default function DistributionReimagined({ t, isRtl }) {
         >
           <span className="block sm:whitespace-nowrap">
             <span className="text-zinc-400 font-normal">
-              {t?.hero_synex_line1_prefix || "Prenez le contrôle"}
+              {t?.hero_synex_line1_prefix || "Gérez vos tournées"}
             </span>{' '}
             <span className="inline-flex align-middle mx-1 sm:mx-2 lg:mx-2.5 h-7 w-18 sm:h-9 sm:w-24 md:h-11 md:w-28 lg:h-12 lg:w-32 overflow-hidden rounded-full border border-black/10 shadow-sm ring-2 ring-white transition-transform duration-500 hover:scale-105">
               <img 
@@ -40,16 +40,16 @@ export default function DistributionReimagined({ t, isRtl }) {
               />
             </span>{' '}
             <span>
-              {t?.hero_synex_line1_suffix || "de votre capital."}
+              {t?.hero_synex_line1_suffix || "en toute tranquillité."}
             </span>
           </span>
 
           <span className="block mt-1 sm:mt-2.5 sm:whitespace-nowrap">
             <span>
-              {t?.hero_synex_line2_prefix || "Distribuez à un niveau"}
+              {t?.hero_synex_line2_prefix || "Livrez, encaissez,"}
             </span>{' '}
             <span className="text-zinc-950 font-bold">
-              {t?.hero_synex_line2_suffix || "supérieur."}
+              {t?.hero_synex_line2_suffix || "dormez tranquille."}
             </span>{' '}
             <span className="inline-flex align-middle mx-1 sm:mx-2 lg:mx-2.5 h-7 w-18 sm:h-9 sm:w-24 md:h-11 md:w-28 lg:h-12 lg:w-32 overflow-hidden rounded-full border border-black/10 shadow-sm ring-2 ring-white transition-transform duration-500 hover:scale-105">
               <img 
@@ -69,7 +69,7 @@ export default function DistributionReimagined({ t, isRtl }) {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mx-auto mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-zinc-600 font-medium"
         >
-          {t?.hero_synex_sub || "RASSID rassemble vos opérations terrain, le suivi des créances et le pilotage des tournées en un système unique — vous garantissant clarté, rapidité et contrôle total à chaque étape de votre distribution."}
+          {t?.hero_synex_sub || "RASSID rassemble vos livraisons, vos dettes clients et votre stock camion dans une seule application. Vous savez exactement où en est votre argent à chaque instant."}
         </motion.p>
 
         {/* Action Button Pair (Synex Style) */}
@@ -81,11 +81,11 @@ export default function DistributionReimagined({ t, isRtl }) {
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <FancyButton href="#pricing">
-            {isRtl ? "طلب تجربة على شاحناتك" : "Demander un essai sur vos camions"}
+            {isRtl ? "جرّب على شاحناتك" : "Essayer sur vos camions"}
           </FancyButton>
 
           <PrimaryButton href="#console-centrale">
-            {isRtl ? "استكشاف المميزات" : "Découvrir les fonctionnalités"}
+            {isRtl ? "شوف المميزات" : "Voir les fonctionnalités"}
           </PrimaryButton>
         </motion.div>
 

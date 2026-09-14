@@ -46,8 +46,8 @@ export default function Footer({ t }) {
   const currentYear = new Date().getFullYear();
 
   const siteLinks = [
-    { label: t?.footer_nav_system || "Système", href: "#dashboard" },
-    { label: t?.footer_nav_dual || "Double Flux", href: "#distribution-reimaginee" },
+    { label: t?.footer_nav_system || "Fonctionnalités", href: "#dashboard" },
+    { label: t?.footer_nav_dual || "Comment ça marche", href: "#distribution-reimaginee" },
     { label: t?.footer_nav_why || "Pourquoi RASSID", href: "#pourquoi-rassid" },
     { label: t?.footer_nav_pricing || "Tarifs", href: "#pricing" },
     { label: t?.footer_nav_faq || "FAQ", href: "#faq" },

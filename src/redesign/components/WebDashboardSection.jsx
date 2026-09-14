@@ -66,11 +66,11 @@ export default function WebDashboardSection({ t }) {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-[clamp(2.2rem,5vw,4.2rem)] font-bold leading-[1.08] tracking-[-0.03em] text-white"
           >
-            <span>{t?.dashboard_section_title_prefix || "Toute la"}</span>{" "}
+            <span>{t?.dashboard_section_title_prefix || "Suivez votre"}</span>{" "}
             <span className="bg-gradient-to-r from-[#D6FFA3] via-[#7FE300] to-[#38E09D] bg-clip-text text-transparent">
-              {t?.dashboard_section_title_gradient || "Puissance Centrale"}
+              {t?.dashboard_section_title_gradient || "business"}
             </span>{" "}
-            <span>{t?.dashboard_section_title_suffix || "du Grand Livre"}</span>
+            <span>{t?.dashboard_section_title_suffix || "depuis votre bureau"}</span>
           </motion.h2>
 
           {/* Subtitle */}
@@ -81,7 +81,7 @@ export default function WebDashboardSection({ t }) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-4 max-w-2xl text-[16px] sm:text-[18px] leading-relaxed text-zinc-400 font-medium"
           >
-            {t?.dashboard_section_sub || "Supervisez votre flotte de fourgons, auditez chaque centime encaissé et clôturez vos journées en 5 minutes chrono."}
+            {t?.dashboard_section_sub || "Voyez en temps réel ce que vos chauffeurs font sur le terrain. Combien de cash encaissé, qui doit combien, et quel stock reste dans chaque camion."}
           </motion.p>
 
           {/* Action Buttons (Aave White Pill + Muted Pill) */}
@@ -102,7 +102,7 @@ export default function WebDashboardSection({ t }) {
               {t?.dashboard_section_btn_console || "Ouvrir la Console"}
             </PrimaryButton>
             <FancyButton href="#pricing" dark>
-              {t?.dashboard_section_btn_demo || "Découvrir les fonctionnalités"}
+              {t?.dashboard_section_btn_demo || "Voir les fonctionnalités"}
             </FancyButton>
           </motion.div>
 

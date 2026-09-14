@@ -6,27 +6,27 @@ import rassidIcon from '../assets/rassid-icon.svg';
 export default function WhyRassidSection({ t, isRtl }) {
   const rows = [
     {
-      title: isRtl ? "تسجيل المبيعات والتسليم الميداني" : "Enregistrement des ventes & livraisons",
+      title: isRtl ? "تسجيل التسليمات" : "Enregistrer les livraisons",
       othersCheck: true
     },
     {
-      title: isRtl ? "عمل 100% بدون إنترنت (قاعدة SQLite محلية)" : "Mode 100% hors-ligne autonome (SQLite)",
+      title: isRtl ? "متابعة الديون" : "Suivre les dettes",
       othersCheck: false
     },
     {
-      title: isRtl ? "سجل مالي مشفر وموثق رياضياً SHA-256" : "Grand livre scellé SHA-256 infalsifiable",
+      title: isRtl ? "طباعة وصل" : "Imprimer un bon",
       othersCheck: false
     },
     {
-      title: isRtl ? "متابعة ديون المحلات والتنبيه التلقائي للمتأخرات" : "Fiches épiceries & alertes impayés",
-      othersCheck: true
-    },
-    {
-      title: isRtl ? "مطابقة الصندوق وإغلاق اليومية في 5 دقائق" : "Clôture de caisse & réconciliation en 5 min",
+      title: isRtl ? "مراقبة الصندوق في المساء" : "Vérifier la caisse le soir",
       othersCheck: false
     },
     {
-      title: isRtl ? "مراقبة مخزون الشاحنة ومنع التلاعب بالأعطال" : "Garde de stock fourgon & validation des avaries",
+      title: isRtl ? "معرفة شكون تأخّر في الخلاص" : "Savoir qui est en retard",
+      othersCheck: false
+    },
+    {
+      title: isRtl ? "حساب مخزون الشاحنة" : "Compter le stock du camion",
       othersCheck: false
     }
   ];
@@ -73,10 +73,10 @@ export default function WhyRassidSection({ t, isRtl }) {
             transition={{ delay: 0.1 }}
             className="font-display text-[clamp(2.1rem,4.2vw,3.4rem)] font-bold leading-[1.12] tracking-tight text-white drop-shadow-sm max-w-3xl mx-auto"
           >
-            {t.why_title_1 || "Conçu pour le terrain."}
+            {t.why_title_1 || "Fini les cahiers."}
             <br className="hidden sm:inline" />{" "}
             <span className="text-white/85">
-              {t.why_title_2 || "Pas pour les carnets d'hier."}
+              {t.why_title_2 || "Fini les disputes."}
             </span>
           </motion.h2>
 
@@ -88,7 +88,7 @@ export default function WhyRassidSection({ t, isRtl }) {
             transition={{ delay: 0.2 }}
             className="mx-auto mt-4 max-w-2xl text-sm sm:text-base leading-relaxed text-zinc-300 font-medium"
           >
-            {t.why_sub || "Connectez vos livreurs, vos stocks mobiles et votre comptabilité — tous synchronisés dans un grand livre infalsifiable pour une visibilité totale."}
+            {t.why_sub || "Tout ce que vous faites sur papier — livraisons, dettes, bons — RASSID le fait sur le téléphone. Plus vite, sans erreurs, et sans rien perdre."}
           </motion.p>
         </div>
 
@@ -194,33 +194,6 @@ export default function WhyRassidSection({ t, isRtl }) {
 
           </div>
 
-        </motion.div>
-
-        {/* Financial Impact Comparison Callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-10 sm:mt-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-start"
-        >
-          <div>
-            <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider block">
-              {t.why_cost_label || "Bénéfice opérationnel direct constaté :"}
-            </span>
-            <p className="text-xs sm:text-sm text-zinc-300 mt-0.5">
-              {t.why_cost_sub || "Constaté sur plus de 180 tournées de distribution réelles en Algérie."}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4 sm:gap-6 shrink-0">
-            <div className="px-3.5 py-1.5 rounded-xl bg-[#7FE300]/15 border border-[#7FE300]/40 text-[#7FE300] text-xs sm:text-sm font-black font-mono">
-              RASSID : {t.why_cost_rassid || "0 DA de perte"}
-            </div>
-            <div className="px-3.5 py-1.5 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs sm:text-sm font-bold font-mono">
-              Carnets : {t.why_cost_others || "-15% à -25%"}
-            </div>
-          </div>
         </motion.div>
 
       </div>

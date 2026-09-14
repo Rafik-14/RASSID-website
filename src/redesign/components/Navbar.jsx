@@ -17,10 +17,10 @@ export default function Navbar({ lang, setLang, t }) {
   }, []);
 
   const navLinks = [
-    { href: '#console-centrale', label: t?.nav_console || (isRtl ? 'لوحة التحكم' : 'Grand Livre') },
+    { href: '#console-centrale', label: t?.nav_console || (isRtl ? 'لوحة التحكم' : 'Console Web') },
     { href: '#pourquoi-rassid', label: t?.nav_why || (isRtl ? 'لماذا رصيد' : 'Pourquoi RASSID') },
-    { href: '#pricing', label: t?.nav_pricing || (isRtl ? 'الأسعار' : 'Tarifs DZD') },
-    { href: '#faq', label: t?.nav_faq || (isRtl ? 'الأسئلة الشائعة' : 'FAQ') },
+    { href: '#pricing', label: t?.nav_pricing || (isRtl ? 'الأسعار' : 'Tarifs') },
+    { href: '#faq', label: t?.nav_faq || (isRtl ? 'أسئلة شائعة' : 'FAQ') },
   ];
 
   return (
@@ -101,7 +101,7 @@ export default function Navbar({ lang, setLang, t }) {
             dark
             className="hidden sm:inline-flex"
           >
-            {t?.nav_cta || (isRtl ? 'تجربة مجانية' : "Démarrer l'essai")}
+            {t?.nav_cta || (isRtl ? 'جرّب مجاناً' : 'Essai gratuit')}
           </PrimaryButton>
 
           {/* Mobile Menu Toggle Button */}
