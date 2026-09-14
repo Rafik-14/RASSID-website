@@ -93,7 +93,7 @@ export default function WebDashboardSection({ t }) {
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
           >
             <PrimaryButton 
-              href="https://app.rassid.dz"
+              href="https://app.rassid.net"
               target="_blank"
               rel="noreferrer"
               dark
@@ -131,7 +131,7 @@ export default function WebDashboardSection({ t }) {
             {/* Centered URL Bar */}
             <div className="flex items-center gap-2 rounded-full border border-white/[0.08] bg-black/50 px-4 sm:px-6 py-1 font-mono text-xs text-zinc-400 shadow-inner">
               <Lock className="size-3 text-[#7FE300]" />
-              <span className="text-zinc-300 font-medium">app.rassid.dz</span>
+              <span className="text-zinc-300 font-medium">app.rassid.net</span>
               <span className="hidden sm:inline text-zinc-600">/overview</span>
             </div>
 
