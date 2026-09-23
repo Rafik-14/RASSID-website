@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 
 /**
@@ -54,8 +55,8 @@ export default function Footer({ t }) {
   ];
 
   const legalLinks = [
-    { label: t?.footer_terms || "Conditions d'utilisation", href: "#terms" },
-    { label: t?.footer_privacy || "Politique de confidentialité", href: "#privacy" },
+    { label: t?.footer_terms || "Conditions d'utilisation", href: "/terms" },
+    { label: t?.footer_privacy || "Politique de confidentialité", href: "/privacy" },
   ];
 
   const socialLinks = [
@@ -112,13 +113,13 @@ export default function Footer({ t }) {
           <span className="hidden sm:inline-block text-zinc-300 select-none">|</span>
 
           {legalLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               className="text-sm sm:text-base font-medium text-zinc-600 hover:text-black transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

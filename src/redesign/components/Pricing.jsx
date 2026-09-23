@@ -164,8 +164,8 @@ export default function Pricing({ t, isRtl }) {
                 <div className="flex items-baseline gap-1.5">
                   <span className="font-display text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
                     {cycle === '6m' 
-                      ? (t?.pricing_solo_price_6m || "24 000 DA")
-                      : (t?.pricing_solo_price_1y || "39 000 DA")
+                      ? (t?.pricing_solo_price_6m || "30 000 DA")
+                      : (t?.pricing_solo_price_1y || "50 000 DA")
                     }
                   </span>
                   <span className="text-xs sm:text-sm text-zinc-900/80 font-bold">

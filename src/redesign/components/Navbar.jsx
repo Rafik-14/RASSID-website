@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import PrimaryButton from './PrimaryButton';
 import appIcon from '../assets/rassid_app_icon.webp';
@@ -54,8 +55,8 @@ export default function Navbar({ lang, setLang, t }) {
         </div>
 
         {/* Brand Lockup: 3D Squircle App Icon + Wordmark */}
-        <a 
-          href="#hero" 
+        <Link 
+          to="/" 
           className="flex items-center gap-2 sm:gap-2.5 transition-transform hover:opacity-95 shrink-0"
         >
           <img 
@@ -66,7 +67,7 @@ export default function Navbar({ lang, setLang, t }) {
           <span className="font-display text-sm sm:text-base font-bold tracking-tight text-white">
             {t?.nav_brand || (isRtl ? 'رصيد' : 'Rassid')}
           </span>
-        </a>
+        </Link>
 
         {/* Center Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-5 lg:gap-7 font-sans text-[13px] sm:text-[13.5px] font-medium text-zinc-300">

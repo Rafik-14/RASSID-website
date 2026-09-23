@@ -51,8 +51,8 @@ export default function FAQ({ t, isRtl }) {
         ? "بشحال؟ كاين فريّ كاشي؟" 
         : "C'est combien ? Il y a des frais cachés ?",
       a: isRtl 
-        ? "بلان سولو يبدا من 24 000 دج لـ 6 أشهر. كلشي فيه، بدون تكاليف مخفية. للأساطيل، نديرو سعر مخصّص حسب عدد الشاحنات. وتقدر تجرّب شهر بالمجان قبل ما تقرر."
-        : "Le plan Solo commence à 24 000 DA pour 6 mois. Tout est inclus, pas de frais cachés. Pour les flottes, on fait un prix personnalisé selon le nombre de camions. Et vous pouvez essayer 1 mois gratuitement avant de décider."
+        ? "بلان سولو يبدا من 30 000 دج لـ 6 أشهر. كلشي فيه، بدون تكاليف مخفية. للأساطيل، نديرو سعر مخصّص حسب عدد الشاحنات. وتقدر تجرّب شهر بالمجان قبل ما تقرر."
+        : "Le plan Solo commence à 30 000 DA pour 6 mois. Tout est inclus, pas de frais cachés. Pour les flottes, on fait un prix personnalisé selon le nombre de camions. Et vous pouvez essayer 1 mois gratuitement avant de décider."
     },
     {
       id: "06",
