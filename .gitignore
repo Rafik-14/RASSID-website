@@ -32,3 +32,6 @@ dist-ssr
 # Design assets & reference mockups
 add_assets/
 design-variants/
+
+# Binaries & APK builds
+*.apk
