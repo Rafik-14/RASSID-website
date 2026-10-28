@@ -100,7 +100,7 @@ function TermsFr() {
       <p>
         Pour toute question relative aux présentes conditions :<br />
         Email : <a href="mailto:contact@rassid.dz">contact@rassid.dz</a><br />
-        WhatsApp : <a href="https://wa.me/213550000000">+213 550 000 000</a>
+        WhatsApp : <a href="https://wa.me/213552028352">+213 552 02 83 52</a>
       </p>
     </>
   );
@@ -206,7 +206,7 @@ function TermsAr() {
       <p>
         لأي سؤال حول هذه الشروط:<br />
         البريد الإلكتروني: <a href="mailto:contact@rassid.dz">contact@rassid.dz</a><br />
-        واتساب: <a href="https://wa.me/213550000000">213550000000+</a>
+        واتساب: <a href="https://wa.me/213552028352" dir="ltr">+213 552 02 83 52</a>
       </p>
     </>
   );

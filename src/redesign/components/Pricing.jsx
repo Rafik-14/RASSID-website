@@ -6,12 +6,12 @@ export default function Pricing({ t, isRtl }) {
   const [cycle, setCycle] = useState('6m'); // '6m' | '1y'
 
   const soloWaUrl = isRtl
-    ? "https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B3%D9%88%D9%84%D9%88%20(SOLO)%20%D9%84%D8%B4%D8%A7%D8%AD%D9%86%D8%AA%D9%8A"
-    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20démarrer%20l'essai%20gratuit%20du%20plan%20SOLO%20pour%20mon%20fourgon";
+    ? "https://wa.me/213552028352?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D8%B1%D8%A8%D8%A9%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%B3%D9%88%D9%84%D9%88%20(SOLO)%20%D9%84%D8%B4%D8%A7%D8%AD%D9%86%D8%AA%D9%8A"
+    : "https://wa.me/213552028352?text=Bonjour,%20je%20souhaite%20démarrer%20l'essai%20gratuit%20du%20plan%20SOLO%20pour%20mon%20fourgon";
 
   const orgWaUrl = isRtl
-    ? "https://wa.me/213550000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20(ORGANISATION)"
-    : "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20plan%20ORGANISATION%20(flotte%20avec%20console%20web%20centrale)";
+    ? "https://wa.me/213552028352?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D9%88%D8%A7%D9%84%D8%A3%D8%B3%D8%B7%D9%88%D9%84%20(ORGANISATION)"
+    : "https://wa.me/213552028352?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20le%20plan%20ORGANISATION%20(flotte%20avec%20console%20web%20centrale)";
 
   const soloFeatures = isRtl ? [
     "تسليمات، خلاصات، مرتجعات، إشعارات",

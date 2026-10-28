@@ -74,7 +74,7 @@ export default function Footer({ t }) {
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/213550000000?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20RASSID",
+      href: "https://wa.me/213552028352?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20RASSID",
       icon: WhatsAppIcon,
       isCustom: true,
     },
