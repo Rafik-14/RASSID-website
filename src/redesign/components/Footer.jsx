@@ -68,7 +68,7 @@ export default function Footer({ t }) {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/rassid.app",
+      href: "https://www.instagram.com/rassidapp?utm_source=ig_web_button_share_sheet&rpxt=ZDNlZDc0MzIxNw==",
       icon: InstagramIcon,
       isCustom: true,
     },
